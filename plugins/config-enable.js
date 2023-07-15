@@ -63,7 +63,7 @@ throw false
 }}
 chat.delete = !isEnable
 break
-case "viewonce":
+case "antiviewonce":
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
 global.dfail("admin", m, conn)

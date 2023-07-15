@@ -69,7 +69,7 @@ if (!(isAdmin || isOwner)) {
 global.dfail("admin", m, conn)
 throw false
 }}
-chat.antiviewonce = isEnable
+chat.viewonce = isEnable
 break
 case 'public':
 isAll = true

@@ -11,7 +11,7 @@
 </a>
 
 # `Características del bot`
-|  Funciones y comandos  |                                           Sip |
+|  Funciones y comandos  |                                           Si |
 | :---------------------------------------------: | :-----------: |
 | Crea stickers|✓|
 | Bienvenida automática|✓|

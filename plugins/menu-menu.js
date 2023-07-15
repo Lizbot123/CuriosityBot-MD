@@ -275,7 +275,7 @@ return _0x1a2b8a;
 }
 let buttonMessage = {
     'document': {
-        'url': md
+        'url': ig
     },
     'mimetype': td,
     'fileName': 'D A S H B O A R D',
@@ -289,7 +289,7 @@ let buttonMessage = {
             'title': 'Hola!!',
             'thumbnail': fs.readFileSync('./storage/menus/Menu1.jpg'),
             'renderLargerThumbnail': !![],
-            'sourceUrl': yt
+            'sourceUrl': ig
         }
     },
   'caption': menu['trim']()

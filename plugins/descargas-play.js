@@ -19,6 +19,9 @@ import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/
    let vide = `https://yt.btch.bz/download?URL=${url}&videoName=video`
 
     let web = `https://yt.btch.bz/downloadAudio?URL=${url}&videoName=video`
+    let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytplay?apikey=${lolkeysapi}&query=${title}`)   
+let lolh = await lolhuman.json()
+let n = lolh.result.title || 'error'
     var tmb = thumbnail
     var captionvid = `
   *∘ 📑 TÍTULO:*
@@ -45,7 +48,7 @@ import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/
     title: "",
     body: "CuriosityBot-MD",
     thumbnailUrl: tmb ,
-    sourceUrl: md,
+    sourceUrl: web,
     mediaType: 1,
     showAdAttribution: true,
     renderLargerThumbnail: true
@@ -53,7 +56,7 @@ import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/
 
     if (durationS > 18000) return conn.sendMessage(m.chat, { text: `*LINK:* ${await cut(url)}\n\n_Durasi terlalu panjang..._\n*Duration Limit!*` }, { quoted: pesan })
     m.react(done)
-    conn.sendMessage(m.chat, { audio: { url: web }, mimetype: 'audio/mpeg', contextInfo: {
+    conn.sendMessage(m.chat, { audio: { url: lolh.result.audio.link }, mimetype: 'audio/mpeg', contextInfo: {
     externalAdReply: {
     title: title,
     body: "",
@@ -72,7 +75,6 @@ handler.command = handler.help = ['play','song','youtube','ytmp3','ds','download
 handler.tags = ['dl'];
 handler.exp = 0;
 handler.diamond = true
-handler.register = true
 handler.premium = false;
 export default handler
 async function cut(url) {

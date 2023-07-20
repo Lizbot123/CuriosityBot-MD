@@ -8,7 +8,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 ┅━━═❏ *PINTEREST* ❏═━━┅
 💻 *Resultado de:* ${text}
 🔎 *Buscado en:* Pinterest
-${autor}
+${author}
 `.trim(), m)
 }
 handler.help = ['pinterest <keyword>']

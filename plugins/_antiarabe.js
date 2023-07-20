@@ -1,4 +1,3 @@
-
 let handler = m => m
 
 handler.before = async function (m, {conn, isAdmin, isBotAdmin, isOwner} ) {
@@ -6,11 +5,11 @@ handler.before = async function (m, {conn, isAdmin, isBotAdmin, isOwner} ) {
   let chat = global.db.data.chats[m.chat];
   
   if (isBotAdmin && chat.onlyLatinos && !isAdmin && !isOwner) {
-    let forbidPrefixes = ["212", "265", "234", "258", "263", "967", "20", "92", "91"];
+    let forbidPrefixes = ["212", "265", "234", "258", "263", "967", "20", "92", "91", "27", "222", "98", "90"];
 
     for (let prefix of forbidPrefixes) {
       if (m.sender.startsWith(prefix)) {
-        m.reply('⚠️ ÁRABE DETECTADO*\n\nHasta la proxima', m.sender)
+        m.reply('*⚠️ TU NÚMERO ES ALGO RARAO, SERAS ELIMINADO/A*\n\nHasta pronto', m.sender)
         await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove');
         return false;
       }

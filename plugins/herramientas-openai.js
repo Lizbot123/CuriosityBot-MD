@@ -12,7 +12,7 @@ var syms = `Eres CuriosityBot-MD, un gran modelo de lenguaje entrenado por OpenA
         let res = await gpt.ChatGpt(text, syms)
          await m.reply(res.text)
 	} catch {
-		m.reply(`⚠️ Error: intenta más tarde`)
+		m.reply(`*⚠️ ERROR: INTENTEMOS MAS TARDE*`)
 	}
 
 }

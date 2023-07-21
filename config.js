@@ -13,7 +13,7 @@ const __dirname = global.__dirname(import.meta.url)
 
 //⊱ ━━━━━.⋅ Owner ⋅.━━━━ ⊰
 global.owner = [
-  ['59894808483', 'Azami - Creador 🥏', true],
+  ['59894808483', 'Creador ✅', true],
   ['5214531106422'], ['59894808483'], ['593968585383'], ['5492266613038'], ['5492266466080'],
   ['50258115623'], ['573106040746']]  
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
@@ -56,6 +56,7 @@ global.APIs = { // API Prefix.
   rey: 'https://server-api-rey.herokuapp.com',
   hardianto: 'http://hardianto-chan.herokuapp.com',
   shadow: 'https://api.reysekha.xyz',
+  azami: 'https://azami-mods.herokuapp.com',
   apialc: 'https://api-alc.herokuapp.com',
   botstyle: 'https://botstyle-api.herokuapp.com',
   neoxr: 'https://neoxr-api.herokuapp.com',

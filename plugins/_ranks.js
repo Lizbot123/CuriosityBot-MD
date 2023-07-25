@@ -1,4 +1,3 @@
-
 global.rpg = {
   emoticon(string) {
     string = string.toLowerCase()

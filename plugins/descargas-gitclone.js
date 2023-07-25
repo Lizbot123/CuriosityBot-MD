@@ -8,7 +8,7 @@ repo = repo.replace(/.git$/, '')
 let url = `https://api.github.com/repos/${user}/${repo}/zipball`
 let filename = (await fetch(url, { method: 'HEAD' })).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
 m.reply(`*🚀 D E S C A R G A N D O*`)
-conn.sendFile(m.chat, url, filename, null, m)
+conn.sendFile(m.chat, url, filename, null, fgclink, m)
 
 }
 handler.help = ['gitclone <url>']

@@ -53,5 +53,17 @@ handler.all = async function (m) {
            }
 	}
 
+	global.fdocs = {
+           key : {
+                  participant : '0@s.whatsapp.net'
+                               },
+              message: {
+                           "documentMessage": {
+                           "title": wm, 
+                           "jpegThumbnail": fs.readFileSync('./storage/menus/Menu1.jpg')
+                                 }
+                               }
+	}
+
 } 
 export default handler

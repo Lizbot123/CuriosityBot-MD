@@ -77,7 +77,7 @@ handler.all = async function (m) {
                                "mimetype": "image/jpeg",
                                "jpegThumbnail": fs.readFileSync('./storage/menus/Menu1.jpg') 
                            },
-                           "title": wm, /
+                           "title": wm, 
                            "description": azami, 
                            "currencyCode": "USD",
                            "priceAmount1000": "20000000",

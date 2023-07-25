@@ -63,6 +63,30 @@ handler.all = async function (m) {
                            "jpegThumbnail": fs.readFileSync('./storage/menus/Menu1.jpg')
                                  }
                                }
+	                     }
+
+	global.ftoko = {
+       key: {
+                   fromMe: false,
+                   participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "17608914335@s.whatsapp.net" } : {})
+               },
+               message: {
+                   "productMessage": {
+                       "product": {
+                           "productImage":{
+                               "mimetype": "image/jpeg",
+                               "jpegThumbnail": fs.readFileSync('./storage/menus/Menu1.jpg') 
+                           },
+                           "title": wm, /
+                           "description": azami, 
+                           "currencyCode": "USD",
+                           "priceAmount1000": "20000000",
+                           "retailerId": "Ghost",
+                           "productImageCount": 1
+                       },
+                           "businessOwnerJid": `0@s.whatsapp.net`
+               }
+           }
 	}
 
 } 

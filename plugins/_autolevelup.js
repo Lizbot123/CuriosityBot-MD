@@ -7,7 +7,6 @@ export async function before(m, { conn }) {
     let before = user.level * 1
     while (canLevelUp(user.level, user.exp, global.multiplier))
         user.level++
-  //  user.role = global.rpg.role(user.level).name
     if (before !== user.level) {
-    m.reply(`*□ LEVEL UP 🆙✨*\n*╔━━━━━━━━━━━*\n*┃ ► _Genial subiste de nivel_*\n*┃◇┏─────────*\n*┃◇╎🍩⇨Nivel anterior:* ${before}\n*┃◇╎🍩⇨Nuevo nivel:* ${user.level}\n*┃◇╎🍩⇨ Rango:* ${user.role}\n*┃◇╎🍩⇨Fecha:* ${new Date().toLocaleString('id-ID')}\n*┃◇┗─────────*\n*╚━━━━━━━━━━━*`.trim())
+    m.reply(`*□ LEVEL UP 🆙✨*\n*╔━━━━━━━━━━━*\n*┃ ► _Genial subiste de nivel_*\n*┃◇┏─────────*\n*┃◇╎🍩⇨Nivel anterior:* ${before}\n*┃◇╎🍩⇨Nuevo nivel:* ${user.level}\n*┃◇╎🍩⇨Rango:* ${user.role}\n*┃◇╎🍩⇨Fecha:* ${new Date().toLocaleString('id-ID')}\n*┃◇┗─────────*\n*╚━━━━━━━━━━━*`.trim())
 }}		

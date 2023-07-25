@@ -36,5 +36,22 @@ handler.all = async function (m) {
                               }
                              }
 
+	global.fgclink = {
+           "key": {
+               "fromMe": false,
+               "participant": "0@s.whatsapp.net",
+               "remoteJid": "0@s.whatsapp.net"
+           },
+           "message": {
+               "groupInviteMessage": {
+                   "groupJid": "6285736178354-1625305606@g.us",
+                   "inviteCode": "null",
+                   "groupName": "Curiosity", 
+                   "caption": wm, 
+                   'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')
+               }
+           }
+	}
+
 } 
 export default handler

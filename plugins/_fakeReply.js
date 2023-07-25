@@ -80,7 +80,7 @@ handler.all = async function (m) {
                            "title": wm, 
                            "description": azami, 
                            "currencyCode": "USD",
-                           "priceAmount1000": "20000000",
+                           "priceAmount1000": "99999999",
                            "retailerId": "Ghost",
                            "productImageCount": 1
                        },
@@ -100,7 +100,7 @@ handler.all = async function (m) {
 					fileLength: fsizedoc,
 					height: 306,
 					width: 366,
-					jpegThumbnail: fs.readFileSync('./thumbnail.jpg')
+					jpegThumbnail: fs.readFileSync('./storage/menus/Menu1.jpg')
 				}
 			}
 	}

@@ -19,5 +19,23 @@ handler.all = async function (m) {
 	//reply link yt
     global.youtube = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: 'ˢᵘˢᶜʳᶦᵇᵉᵗᵉ ᵃ ⁿᵘᵉˢᵗʳᵒ ᶜᵃⁿᵃˡ ᵈᵉˡ ʸᵒᵘᵀᵘᵇᵉ : ' + yt, title: 'YouTube', body: 'CuriosityBot-MD', thumbnailUrl: pp, sourceUrl: yt }}}
 
+    global.fgif = {
+            key: { 
+                 fromMe: false,
+                 participant: `0@s.whatsapp.net`, ...(m.chat ? 
+            { remoteJid: "6285736178354-1625305606@g.us" } : {}) 
+                       },
+            message: { 
+                        "videoMessage": { 
+                        "title": wm,
+                        "h": `Hmm`,
+                        'seconds': '999999999', 
+                        'gifPlayback': 'true', 
+                        'caption': wm,
+                        'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')
+                               }
+                              }
+                             }
+
 } 
 export default handler

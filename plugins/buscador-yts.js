@@ -7,7 +7,7 @@ if (!text) return conn.reply(m.chat, `*⚠️ ESCRIBA EL NOMBRE DE UN VIDEO O UN
   let tes = results.all
   let teks = results.all.map(v => {
     switch (v.type) { 
-      case 'video': return `🔰 *TÍTULO:* ${v.title}
+      case 'video': return `📑 *TÍTULO:* ${v.title}
 ✨ *ENLACE:* ${v.url}
 ⏰ *DURACIÓN:* ${v.timestamp}
 🔎 *SUBIDO:* ${v.ago}

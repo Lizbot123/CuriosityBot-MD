@@ -113,7 +113,7 @@ global.author = '@1.0.2'
 //⊱ ━━━━━.⋅ Información ⋅.━━━━ ⊰
 
 global.wm = '『 CuriosityBot-MD 』'
-global.azami = 'Azami ©'
+global.azami = 'ᬳ⿻⃯🍓͜͡𝑨⃮𝒛ͦ𝒂͎ᷫ𝒎ͨ𝒊⃯ᮭᬳ'
 global.cb = 'CuriosityBot-MD'
 global.wait = '*_⌛ C A R G A N D O ▬▬▬▭_*'
 global.vs = '1.0.2'

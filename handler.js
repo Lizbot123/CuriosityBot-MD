@@ -562,7 +562,7 @@ export async function callUpdate(callUpdate) {
     for (let nk of callUpdate) {
     if (nk.isGroup == false) {
     if (nk.status == "offer") {
-    let callmsg = await this.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, Las ${nk.isVideo ? 'videollamadas' : 'llamadas'} las llamadas están prohibidas, seras bloqueado`, false, { mentions: [nk.from] })
+    let callmsg = await this.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, Las ${nk.isVideo ? 'videollamadas' : 'llamadas'} están prohibidas, seras bloqueado`, false, { mentions: [nk.from] })
     let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;Azami 👑;;;\nFN:Azami\nORG:Azami 👑\nTITLE:\nitem1.TEL;waid=18134039996:+598 9999\nitem1.X-ABLabel:Azami 👑\nX-WA-BIZ-DESCRIPTION:Solo cosas del bot.\nX-WA-BIZ-NAME:Azami 👑\nEND:VCARD`
     await this.sendMessage(nk.from, { contacts: { displayName: 'Azami 👑', contacts: [{ vcard }] }}, {quoted: callmsg})
     await this.updateBlockStatus(nk.from, 'block')
@@ -584,7 +584,7 @@ export async function deleteUpdate(message) {
             return
         await this.reply(msg.chat, `
 🔎 BORRO UN MENSAJE
-🪁 *NOMBRE:* @${participant.split`@`[0]} 
+💥 *NOMBRE:* @${participant.split`@`[0]} 
 `.trim(), msg, {
             mentions: [participant]
         })
@@ -596,16 +596,16 @@ export async function deleteUpdate(message) {
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '⚠️️ *Este comando solo puede ser utilizado por el Creador del bot*',
-        owner: '⚠️ *Este comando solo puede ser utilizado por el Dueño del Bot*',
-        mods: '⚠️ *Esta función es solo para moderadores del Bot*',
-        premium: '⚠️ *Este comando es solo para miembros Premium*',
-        group: '⚠️ *¡¡¡Este comando solo se puede usar en grupos!!!*',
-        private: '⚠️️ *¡¡¡Este comando solo se puede usar en el chat privado del Bot!!!*',
-        admin: '⚠️️ *Este comando es solo para Admins del grupo*',
-        botAdmin: '⚠️️ *¡¡¡Para usar este comando debo ser Administrador!!!*',
-        unreg: '⚠️ *Regístrese para usar esta función  Escribiendo:*\n\n• */reg nombre.edad*\n\n*_💡 Ejemplo_* : */reg Azami.19*',
-        restrict: '*¡¡¡Esta característica está -deshabilitada!!!*'
+        rowner: '⚠️️ *ESTE COMANDO SOLO MI DESAROLLADOR LO PUEDE USAR*',
+        owner: '⚠️ *ESTE COMANDO SOLO MI PROPIETARIO LO PUEDE USAR*',
+        mods: '⚠️ *ESTA FUNCIÓN SOLO ES PARA MODERADORES*',
+        premium: '⚠️ *ESTA FUNCIÓN SOLO ES PARA USUARIOS PREMIUM*',
+        group: '⚠️ *¡¡¡LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN GRUPOS!!!*',
+        private: '⚠️️ *¡¡¡LA FUNCIÓN SOLO PUEDE SER EJECUTADA EN EL CHAT PRIVADO DEL BOT!!!*',
+        admin: '⚠️️ *ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS*',
+        botAdmin: '⚠️️ *¡¡¡PARA USAR ESTA FUNCIÓN DEBO SER ADMIN!!!*',
+        unreg: '⚠️ *REGÍSTRESE PARA USAR ESTA FUNCIÓN ESCRIBIENDO:*\n\n• */reg nombre.edad*\n\n*_❕ EJEMPLO_* : */reg Undefined.17*',
+        restrict: '⚠️ *¡¡¡ESTA CARACTERÍSTICA ESTA DESACTIVADA!!!*'
     }[type]
     if (msg) return m.reply(msg)
 }

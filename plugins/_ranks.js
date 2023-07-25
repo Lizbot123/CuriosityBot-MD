@@ -12,7 +12,6 @@ global.rpg = {
   role(level) {
     level = parseInt(level)
     if (isNaN(level)) return { name: '', level: '' }
-    // this code make config.js to be a more understandable code
     const role = [
       { name: 'NOVATO(A) V', level: 0 }, { name: 'NOVATO(A) IV', level: 4 }, { name: 'NOVATO(A) III', level: 8 }, { name: 'NOVATO(A) II', level: 12 }, { name: 'NOVATO(A) I', level: 16 },
       { name: 'APRENDIS V', level: 20 }, { name: 'APRENDIS IV', level: 24 }, { name: 'APRENDIS III', level: 28 }, { name: 'APRENDIS II', level: 32 }, { name: 'APRENDIS I', level: 36 },

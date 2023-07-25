@@ -89,5 +89,21 @@ handler.all = async function (m) {
            }
 	}
 
+	global.fimg = {
+			key: {
+				participant: '0@s.whatsapp.net'
+			},
+			message: {
+				imageMessage: {
+					url: ig,
+					mimetype: 'image/jpeg',
+					fileLength: fsizedoc,
+					height: 306,
+					width: 366,
+					jpegThumbnail: fs.readFileSync('./thumbnail.jpg')
+				}
+			}
+	}
+
 } 
 export default handler

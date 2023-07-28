@@ -105,5 +105,37 @@ handler.all = async function (m) {
 			}
 	}
 
+	global.ftextt = {
+            key: { 
+                 fromMe: false,
+                 participant: `0@s.whatsapp.net`, ...(m.chat ? 
+            { remoteJid: "6285736178354-1625305606@g.us" } : {}) 
+                       },
+            message: { 
+               "extendedTextMessage": {
+                        "text":wm,
+                        "title": wm,
+                        'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')
+                               }
+                             } 
+                            }
+               
+                  global.fliveLoc = {
+            key:
+            { fromMe: false,
+            participant: `0@s.whatsapp.net`, ...(m.chat  ? 
+            { remoteJid: "status@broadcast" } : {}) },
+            message: { "liveLocationMessage": { "caption":"By: " + global.azami ,"h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}
+           }
+               
+                  global.fliveLoc2 = {
+            key:
+            { fromMe: false,
+            participant: `0@s.whatsapp.net`, ...(m.chat ? 
+            { remoteJid: "status@broadcast" } : {}) },
+            message: { "liveLocationMessage": { "title": "Azami","h": wm, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}
+           }
+               
+
 } 
 export default handler

@@ -12,14 +12,14 @@ global.__filename = function filename(pathURL = import.meta.url, rmPrefix = plat
 const __dirname = global.__dirname(import.meta.url)
 
 global.owner = [
-['59894808483', 'Creador 🎨', true],
-['5214531106422'], ['593968585383'], ['5492266613038'], ['5492266466080'],
-['50258115623'], ['573106040746']]  
+ ['59894808483', 'Creador 🎨', true],
+ ['5214531106422'], ['593968585383'], ['5492266613038'], ['5492266466080'],
+ ['50258115623'], ['573106040746']]  
 
 global.animxscans = [['56962237366']]
-global.suittag = ['59894808483'] 
-global.mods = [] 
-global.prems = []
+global.suittag = [['59894808483']] 
+global.mods = [['59894808483']] 
+global.prems = [['59894808483']]
   
 
 // IMAGENES 

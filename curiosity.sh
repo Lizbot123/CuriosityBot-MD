@@ -21,7 +21,7 @@ else
 if pkg install git -y 2>&1 >/dev/null | grep -E -i -q '(command not found|unable to locate package|E: Could not get lock|debconf: delaying package configuration|Package not found|Failed to fetch|404 Not Found|Hash sum mismatch|503 Service Unavailable|504 Gateway Timeout|408 Request Timeout|Connection timed out|Temporary failure resolving)'; then
 error=$(pkg install git -y 2>&1 >/dev/null)
 echo -e "\033[0;31m⚠️ Error: $error\033[0m" 
-echo -e "\033[0;34m⚠️ No se pudo instalar Git. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m" 
+echo -e "\033[0;34m⚠️ No se pudo instalar Git. Verifique su conexión a internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\033[0m" 
 echo -e "\033[01;33m$COMANDOS\033[0m"
 exit 1
 else

@@ -91,6 +91,20 @@ global.fsizedoc = '99999999999999'
 global.fpagedoc = '999'
 
 /*=========== DISEÑOS ===========*/
+global.dmenut = 'ଓ═┅═━–〈'
+global.dmenub = '┊↬'
+global.dmenub2 = '┊'
+global.dmenuf = '┗––––––––––✦'
+global.cmenut = '❏––––––『'                       
+global.cmenuh = '』––––––'                       
+global.cmenub = '┊•'                            
+global.cmenuf = '┗━═┅═━––––––๑\n'    
+global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     '
+global.pmenus = '┊'          
+global.htki = '––––––『' 
+global.htka = '』––––––' 
+global.htjava = '⫹⫺'   
+global.hsquere = ['⛶','❏','⫹⫺']
 
 global.multiplier = 100 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
 

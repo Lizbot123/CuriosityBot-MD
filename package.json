@@ -27,7 +27,7 @@
 "url": "https://github.com/Undefined17/CuriosityBot-MD/issues" },
 "license": "GPL-3.0-or-later",
 "dependencies": {
-  "@adiwajshing/baileys": "git+https://github.com/souravkl11/Baileys.git",
+  "@adiwajshing/baileys": "npm:@queenanya/baileys2@6.4.1",
   "@bochilteam/scraper": "^3.0.0",
   "@vitalets/google-translate-api": "^8.0.0",
   "@shineiichijo/marika": "^2.0.6",

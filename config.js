@@ -22,8 +22,8 @@ global.prems = ['59894808483']
 
 // I M A G E N E S 
 global.aniD = 'ANI_MX_SCANS/'
-global.dirP = raiz//+aniD
-global.media = raiz+'media/'
+global.dirP = aniD
+global.media = 'media/'
 global.raiz = './storage/menus/Menu1.jpg'
 global.imagen1 = fs.readFileSync('./storage/menus/Menu1.jpg')
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg')

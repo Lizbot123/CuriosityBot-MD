@@ -69,6 +69,7 @@ global.vs = '1.0.2'
 global.library = 'Baileys'
 global.lenguaje = 'Español'
 global.jadibts = join(__dirname, 'jadibts/')
+global.menudi = ['⛶','❏','⫹⫺']
 
 /*=========== REACCIONES ===========*/
 global.rwait = '⌛'
@@ -89,22 +90,6 @@ global.waittt = '*_CASI LISTO 🚀_*'
 /*=========== FAKE SIZE ===========*/
 global.fsizedoc = '99999999999999'
 global.fpagedoc = '999'
-
-/*=========== DISEÑOS ===========*/
-global.dmenut = 'ଓ═┅═━–〈'
-global.dmenub = '┊↬'
-global.dmenub2 = '┊'
-global.dmenuf = '┗––––––––––✦'
-global.cmenut = '❏––––––『'                       
-global.cmenuh = '』––––––'                       
-global.cmenub = '┊•'                            
-global.cmenuf = '┗━═┅═━––––––๑\n'    
-global.cmenua = '\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕\n     '
-global.pmenus = '┊'          
-global.htki = '––––––『' 
-global.htka = '』––––––' 
-global.htjava = '⫹⫺'   
-global.hsquere = ['⛶','❏','⫹⫺']
 
 global.multiplier = 100 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
 

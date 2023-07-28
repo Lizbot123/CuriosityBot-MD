@@ -249,12 +249,7 @@ if (existsSync(global.authFile)) {
           }
           
           }
-        try {
-          await waitTwoMinutes(); 
-          await conn.groupAcceptInvite(global.nna2);
-          } catch (error) {
-              console.log('Error al aceptar invitación de grupo:', error);
-          }
+        
 }
  
 process.on('uncaughtException', console.error)

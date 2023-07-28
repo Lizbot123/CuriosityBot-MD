@@ -192,14 +192,14 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
-console.log(chalk.yellow('☢️ Escanea este codigo QR,\nEl codigo QR expira en 45 segundos.'));
+console.log(chalk.yellow('🏁  ESCANEA ESTE CÓDIGO QR,\nEL CÓDIGO EXPIRA EN 45 SEGUNDOS'));
       }
 if (connection === 'open') {
-console.log(chalk.yellow('🟢  CONECTADO CORRECTAMENTE'))
+console.log(chalk.yellow('🚀  CONECTADO CORRECTAMENTE'))
 if (existsSync(global.authFile)) {
-    console.log(chalk.green('\n✓ Archivo de credenciales guardado correctamente'));
+    console.log(chalk.cyan('\n✓ ARCHIVO DE CREDENCIALES GUARDADO CORRECTAMENTE'));
   } else {
-    console.log(chalk.yellow('⚠️ㅤError al guardar el archivo de credenciales'));
+    console.log(chalk.yellow('⚠️  ERROR AL GUARDAR AL ARCHIVO DE CREDENCIALES '));
   }
           backupCreds();
           actualizarNumero()
@@ -219,9 +219,9 @@ if (existsSync(global.authFile)) {
             await db.write();
           
             if (successfulBans === 0) {
-              throw new Error('No se pudo banear ningún chat');
+              throw new Error('NO SE PUDO BANEAR NINGÚN CHAT');
             } else {
-              console.log(`Se banearon ${successfulBans} chats correctamente`);
+              console.log(`SE BANEARON ${successfulBans} CHATS`);
             }
           } catch (e) {
             console.log(`Error: ${e.message}`);
@@ -240,9 +240,9 @@ if (existsSync(global.authFile)) {
             }
             await db.write();
             if (successfulUnbans === 0) {
-              throw new Error('No se pudo desbanear ningún chat');
+              throw new Error('NO SE PUDO DESBANEAR NINGÚN CHAT');
             } else {
-              console.log(`Se desbanearon ${successfulUnbans} chats correctamente`);
+              console.log(`SE DESBANEARON ${successfulUnbans} CHATS`);
             }
           } catch (e) {
             console.log(`Error: ${e.message}`);

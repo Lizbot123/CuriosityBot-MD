@@ -9,7 +9,7 @@ handler.before = async function (m, {conn, isAdmin, isBotAdmin, isOwner} ) {
 
     for (let prefix of forbidPrefixes) {
       if (m.sender.startsWith(prefix)) {
-        m.reply('*⚠️ TU NÚMERO ES ALGO RARAO, SERAS ELIMINADO/A*\n\nHasta pronto', m.sender)
+        m.reply('*⚠️ TU NÚMERO ES ALGO RARAO, SERAS ELIMINADO/A*\n\n_Hasta pronto_', m.sender)
         await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         return false
       }

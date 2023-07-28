@@ -63,17 +63,26 @@ global.azami = 'ᬳ⿻⃯🍓͜͡𝑨⃮𝒛ͦ𝒂͎ᷫ𝒎ͨ𝒊⃯ᮭᬳ'
 global.cb = 'CuriosityBot-MD'
 
 // I N F O
-global.wait = '*_⌛ C A R G A N D O ▬▬▬▭_*'
 global.vs = '1.0.2'
-global.fsizedoc = '99999999999999'
+global.library = 'Baileys'
+global.lenguaje = 'Español'
+global.jadibts = join(__dirname, 'jadibts/')
+
+// R E A C C I O N E S
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
 global.error = '❌' 
 global.xmoji = '🔥' 
-global.raiz = './'
-global.jadibts = join(__dirname, 'jadibts/')
+global.amoji = '👀'
+global.bmoji = '🍀'
+global.cmoji = '🚀'
+global.dmoji = '☠️'
 
+// W A I T
+global.wait = '*_⌛ C A R G A N D O ▬▬▬▭_*'
+global.waitt = '*_ P R E P A R A N D O_*'
+global.waittt = '*_CASI LISTO 🚀_*'
 
 global.multiplier = 100 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
 

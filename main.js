@@ -64,16 +64,16 @@ global.authFile = join(__dirname, `sessions/`)
 global.authFileRespald = join(__dirname, `sesionRespaldo/`)
 global.temp = join(__dirname, 'tmp')
 if (!existsSync(jadibts)) {
-  mkdirSync(jadibts);
-  console.log('DIRECTORIO jadibts CREADO EXITOSAMENTE');
+  mkdirSync(jadibts)
+  console.log('DIRECTORIO jadibts CREADO EXITOSAMENTE')
 }
 if (!existsSync(authFileRespald)) {
-  mkdirSync(authFileRespald);
-  console.log('DIRECTORIO sesionRespaldo CREADO EXITOSAMENTE');
+  mkdirSync(authFileRespald)
+  console.log('DIRECTORIO sesionRespaldo CREADO EXITOSAMENTE')
 }
 if (!existsSync(temp)) {
-  mkdirSync(temp);
-  console.log('SE HA CREADO EL DIRECTORIO tmp CORRECTAMENTE');
+  mkdirSync(temp)
+  console.log('SE HA CREADO EL DIRECTORIO tmp CORRECTAMENTE')
 }
 const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
 
@@ -94,91 +94,91 @@ if (global.db.data) await global.db.write()
 if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp'], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])))}, 30 * 1000)}
 if (opts['server']) (await import(join(__dirname, 'server.js'))).default(global.conn, PORT)
 
-  const SESSION_DIR = authFile;
-  const SESSION_BACKUP_DIR = authFileRespald;
-  const CREDENTIALS_FILE = 'creds.json';
-  const CREDENTIALS_BACKUP_FILE = 'creds.json';
+  const SESSION_DIR = authFile
+  const SESSION_BACKUP_DIR = authFileRespald
+  const CREDENTIALS_FILE = 'creds.json'
+  const CREDENTIALS_BACKUP_FILE = 'creds.json'
   
 function backupCreds() {
-const credsFilePath = path.join(SESSION_DIR, CREDENTIALS_FILE);
-  const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE);
+const credsFilePath = path.join(SESSION_DIR, CREDENTIALS_FILE)
+  const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE)
   
 
-  copyFileSync(credsFilePath, backupFilePath);
-  console.log(`\nSE A CREADO EL ARCHIVO DE RESPALDO: ${backupFilePath}`);
+  copyFileSync(credsFilePath, backupFilePath)
+  console.log(`\nSE A CREADO EL ARCHIVO DE RESPALDO: ${backupFilePath}`)
 
 }
  
 function actualizarNumero() {
-  const configPath = path.join(__dirname, 'config.js');
-  const configData = readFileSync(configPath, 'utf8');
+  const configPath = path.join(__dirname, 'config.js')
+  const configData = readFileSync(configPath, 'utf8')
   const updatedConfigData = configData.replace(/(global\.animxscans\s*=\s*\[\s*\[')[0-9]+'(,\s*'Bot principal\s*-\s*CuriosityBot-MD',\s*true\]\s*\])/, function(match) {
-    const archivoCreds = readFileSync(path.join(__dirname, 'sesionRespaldo/creds.json'));
-    const numero = JSON.parse(archivoCreds).me.id.split(':')[0];
-    return `global.animxscans = [['${numero}', 'CuriosityBot-MD', true]]`;
+    const archivoCreds = readFileSync(path.join(__dirname, 'sesionRespaldo/creds.json'))
+    const numero = JSON.parse(archivoCreds).me.id.split(':')[0]
+    return `global.animxscans = [['${numero}', 'CuriosityBot-MD', true]]`
   });
-  writeFileSync(configPath, updatedConfigData);
+  writeFileSync(configPath, updatedConfigData)
 }
 
 function cleanupOnConnectionError() {
 
   readdirSync(SESSION_DIR).forEach(file => {
-    const filePath = path.join(SESSION_DIR, file);
+    const filePath = path.join(SESSION_DIR, file)
     try {
-      unlinkSync(filePath);
-      console.log(`ARCHIVO ELIMINADO: ${filePath}`);
+      unlinkSync(filePath)
+      console.log(`ARCHIVO ELIMINADO: ${filePath}`)
     } catch (error) {
-      console.log(`NO DE PUDO ELIMINAR EL ARCHIVO: ${filePath}`);
+      console.log(`NO DE PUDO ELIMINAR EL ARCHIVO: ${filePath}`)
     }
-  });
+  })
 
-  const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE);
+  const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE)
   try {
     unlinkSync(backupFilePath);
-    console.log(`ARCHIVO DE COPIA DE SEGURIDAD ELIMINADO: ${backupFilePath}`);
+    console.log(`ARCHIVO DE COPIA DE SEGURIDAD ELIMINADO: ${backupFilePath}`)
   } catch (error) {
-    console.log(`NO SE PUDO ELIMINAR EL ARCHIVO DE COPIA DE SEGURIDAD O NO EXISTE: ${backupFilePath}`);
+    console.log(`NO SE PUDO ELIMINAR EL ARCHIVO DE COPIA DE SEGURIDAD O NO EXISTE: ${backupFilePath}`)
   }
   process.send('reset')
 } 
 
 function credsStatus() {
 
-  const credsFilePath = path.join(SESSION_DIR, CREDENTIALS_FILE);
-  const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE);
+  const credsFilePath = path.join(SESSION_DIR, CREDENTIALS_FILE)
+  const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE)
   
   // Comprobar si el archivo de credenciales originales existe y no es 0 bytes
-  let originalFileValid = false;
+  let originalFileValid = false
   try {
-    const stats = statSync(credsFilePath);
+    const stats = statSync(credsFilePath)
     originalFileValid = stats.isFile() && stats.size > 0;
   } catch (error) {
-    console.log(`EL ARCHIVO DE CREDENCIALES NO EXISTE. GENERANDO CÓDIGO QR...`);
+    console.log(`EL ARCHIVO DE CREDENCIALES NO EXISTE. GENERANDO CÓDIGO QR...`)
     connectionOptions
-      console.log(`ESCANEA EL CÓDIGO QR PARA CONTINUAR.`);
+      console.log(`ESCANEA EL CÓDIGO QR PARA CONTINUAR.`)
   }
   
   if (!originalFileValid) {
     // El archivo de credenciales originales no es válido o falta, así que copie el archivo de copia de seguridad y cambie el nombre
-    const backupStats = statSync(backupFilePath);
+    const backupStats = statSync(backupFilePath)
     if (backupStats.isFile() && backupStats.size > 0) {
-      copyFileSync(backupFilePath, credsFilePath);
-      console.log(`ARCHIVO DE CREDENCIALES RESTAURADO DESDE LA COPIA DE SEGURIDAD: ${backupFilePath} -> ${credsFilePath}`);
+      copyFileSync(backupFilePath, credsFilePath)
+      console.log(`ARCHIVO DE CREDENCIALES RESTAURADO DESDE LA COPIA DE SEGURIDAD: ${backupFilePath} -> ${credsFilePath}`)
         process.send('reset')
     } else {
-      console.log(`NO SE ENCONTRÓ EL ARCHIVO DE CREDENCIALES VÁLIDO Y LA COPIA DE SEGURIDAD ES INVALIDA O FALTA: ${credsFilePath}, ${backupFilePath}`);
+      console.log(`NO SE ENCONTRÓ EL ARCHIVO DE CREDENCIALES VÁLIDO Y LA COPIA DE SEGURIDAD ES INVALIDA O FALTA: ${credsFilePath}, ${backupFilePath}`)
       connectionOptions
     }
   } else {
-    console.log('ARCHIVO DE RESPALDO CORRECTO, CONTINUANDO SESIÓN');
+    console.log('ARCHIVO DE RESPALDO CORRECTO, CONTINUANDO SESIÓN')
   }
 }
 
 function waitTwoMinutes() {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve();
-    }, 2 * 60 * 1000); 
+      resolve()
+    }, 2 * 60 * 1000)
   });
 }
 
@@ -192,60 +192,60 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
-console.log(chalk.yellow('🏁  ESCANEA ESTE CÓDIGO QR,\nEL CÓDIGO EXPIRA EN 45 SEGUNDOS'));
+console.log(chalk.yellow('🏁  ESCANEA ESTE CÓDIGO QR,\nEL CÓDIGO EXPIRA EN 45 SEGUNDOS'))
       }
 if (connection === 'open') {
 console.log(chalk.yellow('🚀  CONECTADO CORRECTAMENTE'))
 if (existsSync(global.authFile)) {
-    console.log(chalk.cyan('\n✓ ARCHIVO DE CREDENCIALES GUARDADO CORRECTAMENTE'));
+    console.log(chalk.cyan('\n✓ ARCHIVO DE CREDENCIALES GUARDADO CORRECTAMENTE'))
   } else {
-    console.log(chalk.yellow('⚠️  ERROR AL GUARDAR AL ARCHIVO DE CREDENCIALES '));
+    console.log(chalk.yellow('⚠️  ERROR AL GUARDAR AL ARCHIVO DE CREDENCIALES '))
   }
-          backupCreds();
+          backupCreds()
           actualizarNumero()
-          credsStatus();
+          credsStatus()
           try {
             // Leer la base de datos
-            await db.read();
-            const chats = db.data.chats;
-            let successfulBans = 0;
+            await db.read()
+            const chats = db.data.chats
+            let successfulBans = 0
             for (const [key, value] of Object.entries(chats)) {
               if (value.isBanned === false) {
                 value.isBanned = true;
-                //console.log('Baneando chat:', key);
-                successfulBans++;
+                //console.log('Baneando chat:', key)
+                successfulBans++
               }
             }
-            await db.write();
+            await db.write()
           
             if (successfulBans === 0) {
-              throw new Error('NO SE PUDO BANEAR NINGÚN CHAT');
+              throw new Error('NO SE PUDO BANEAR NINGÚN CHAT')
             } else {
-              console.log(`SE BANEARON ${successfulBans} CHATS`);
+              console.log(`SE BANEARON ${successfulBans} CHATS`)
             }
           } catch (e) {
-            console.log(`Error: ${e.message}`);
+            console.log(`Error: ${e.message}`)
           } 
           await waitTwoMinutes()         
           try {
-            await db.read();
-            const chats = db.data.chats;
-            let successfulUnbans = 0;
+            await db.read()
+            const chats = db.data.chats
+            let successfulUnbans = 0
             for (const [key, value] of Object.entries(chats)) {
               if (value.isBanned === true) {
-                value.isBanned = false;
-                //console.log('Desbaneando chat:', key);
-                successfulUnbans++;
+                value.isBanned = false
+                //console.log('Desbaneando chat:', key)
+                successfulUnbans++
               }
             }
-            await db.write();
+            await db.write()
             if (successfulUnbans === 0) {
-              throw new Error('NO SE PUDO DESBANEAR NINGÚN CHAT');
+              throw new Error('NO SE PUDO DESBANEAR NINGÚN CHAT')
             } else {
-              console.log(`SE DESBANEARON ${successfulUnbans} CHATS`);
+              console.log(`SE DESBANEARON ${successfulUnbans} CHATS`)
             }
           } catch (e) {
-            console.log(`Error: ${e.message}`);
+            console.log(`Error: ${e.message}`)
           }
           
           }
@@ -254,7 +254,7 @@ if (existsSync(global.authFile)) {
  
 process.on('uncaughtException', console.error)
 
-let isInit = true;
+let isInit = true
 let handler = await import('./handler.js')
 global.reloadHandler = async function (restatConn) {
 try {
@@ -395,9 +395,9 @@ function clearTmp() {
           return true 
           }
           const stats = statSync(path.join(join(__dirname, file)));
-          const mtime = new Date(stats.mtime);
-        const now = new Date();
-        const hourAgo = new Date(now - 60 * 60 * 1000);
+          const mtime = new Date(stats.mtime)
+        const now = new Date()
+        const hourAgo = new Date(now - 60 * 60 * 1000)
         return (
           (file.startsWith('sender-key-') ||
             file.startsWith('sender-key-memory-') ||
@@ -407,7 +407,7 @@ function clearTmp() {
         )
       })
       if (prekey.length === 0) {
-        console.log("Ningún archivo encontrado");
+        console.log("Ningún archivo encontrado")
       } else {
       prekey = [...prekey, ...filesFolderPreKeys]
       filesFolderPreKeys.forEach(files => {
@@ -419,68 +419,68 @@ function clearTmp() {
   }  
   
   function purgeSessionSB() {
-    const listaDirectorios = readdirSync(join(__dirname, jadibts));
-    console.log(listaDirectorios);
-    let SBprekey = [];
+    const listaDirectorios = readdirSync(join(__dirname, jadibts))
+    console.log(listaDirectorios)
+    let SBprekey = []
   
     listaDirectorios.forEach((filesInDir) => {
-      const directorio = readdirSync(join(__dirname, jadibts+filesInDir));
+      const directorio = readdirSync(join(__dirname, jadibts+filesInDir))
       console.log(directorio);
       const DSBPreKeys = directorio.filter((fileInDir) => {
         if (fileInDir.startsWith('pre-key-')) {
-          return true;
+          return true
         }
-        const stats = statSync(path.join(join(__dirname, jadibts+filesInDir+'/'+fileInDir)));
-        const mtime = new Date(stats.mtime);
-        const now = new Date();
-        const hourAgo = new Date(now - 60 * 60 * 1000);
+        const stats = statSync(path.join(join(__dirname, jadibts+filesInDir+'/'+fileInDir)))
+        const mtime = new Date(stats.mtime)
+        const now = new Date()
+        const hourAgo = new Date(now - 60 * 60 * 1000)
         return (
           (fileInDir.startsWith('sender-key-') ||
             fileInDir.startsWith('sender-key-memory-') ||
             fileInDir.startsWith('sender-key-status@broadcast') ||
             fileInDir.startsWith('session')) &&
           mtime <= hourAgo
-        );
-      });
+        )
+      })
       if (DSBPreKeys.length === 0) {
-        console.log('Ningún archivo encontrado');
+        console.log('Ningún archivo encontrado')
       } else {
-        SBprekey = [...SBprekey, ...DSBPreKeys];
+        SBprekey = [...SBprekey, ...DSBPreKeys]
         DSBPreKeys.forEach((fileInDir) => {
-          unlinkSync(dirP+jadibts+filesInDir+'/'+fileInDir);
-          console.log(`${fileInDir} fueron eliminados`);
-        });
+          unlinkSync(dirP+jadibts+filesInDir+'/'+fileInDir)
+          console.log(`${fileInDir} fueron eliminados`)
+        })
       }
-    });
+    })
   }
   
   function purgeOldFiles() {
-      const directories = [authFile, jadibts];
-      const oneHourAgo = new Date(Date.now() - (60 * 60 * 1000));
+      const directories = [authFile, jadibts]
+      const oneHourAgo = new Date(Date.now() - (60 * 60 * 1000))
      
       directories.forEach((dir) => {
           readdirSync(dir, (err, files) => {
-          if (err) throw err;
+          if (err) throw err
           files.forEach((file) => {
-            const filePath = path.join(dir, file);
+            const filePath = path.join(dir, file)
             statSync(filePath, (err, stats) => {
-              if (err) throw err;
-              const createTime = new Date(stats.birthtimeMs);
-              const modTime = new Date(stats.mtimeMs);
-              const isOld = createTime < oneHourAgo || modTime < oneHourAgo;
-              const isCreds = file === 'creds.json';
+              if (err) throw err
+              const createTime = new Date(stats.birthtimeMs)
+              const modTime = new Date(stats.mtimeMs)
+              const isOld = createTime < oneHourAgo || modTime < oneHourAgo
+              const isCreds = file === 'creds.json'
               if (stats.isFile() && isOld && !isCreds) {
                   unlinkSync(filePath, (err) => {
-                  if (err) throw err;
-                  console.log(`Archivos ${filePath} borrados con éxito`);
+                  if (err) throw err
+                  console.log(`Archivos ${filePath} borrados con éxito`)
                 });
               } else {
-                console.log(`Archivo ${filePath} no borrado`);
+                console.log(`Archivo ${filePath} no borrado`)
               }
-            });
-          });
-        });
-      });
+            })
+          })
+        })
+      })
     }
     purgeOldFiles()
 

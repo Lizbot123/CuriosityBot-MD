@@ -16,7 +16,7 @@ if (m.text.includes(linkThisGroup2)) return !0
 if (m.text.includes(linkThisGroup3)) return !0 
 }    
 await m.reply(`*⚠️ ENLACE DETECTADO ⚠️*\n\n*${await this.getName(m.sender)} ROMPISTE LAS REGLAS POR LO CUÁL SERAS ELIMINADO*`)    
-if (!isBotAdmin) return m.reply(`*⚠️ NO SOY ADMIN, NO PUEDO ELIMINAR INTRUSOS*`)  
+if (!isBotAdmin) return m.reply(`*⚠️ NO SOY ADMIN, NO PUEDO ELIMINAR INTRUSOS D:*`)  
 if (isBotAdmin && bot.restrict) {
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 } else if (!bot.restrict) return m.reply(`*⚠️ MI PROPIETARIO DEBE TENER EL MODO RESTRINGIDO ACTIVO*`)

@@ -50,9 +50,11 @@ global.nnnnn = 'https://chat.whatsapp.com/KlRcEfl8snBEEOA0JXzw5A' //enlace curio
 global.nna2 = 'J1R402WH1N0Hdl3S0NDEYu' 
 
 // N O M B R E S 
-global.wm2 = '⎙ 𝙲𝚞𝚛𝚒𝚘𝚜𝚒𝚝𝚢'
-global.wm3 = '' 
-global.wm4 = '『 CuriosityBot-MD 』'
+global.wm = 'Curiosity'
+global.wm2 = '© CuriosityBot-MD'
+global.wm3 = '⎙ 𝙲𝚞𝚛𝚒𝚘𝚜𝚒𝚝𝚢'
+global.wm4 = '' 
+global.wm5 = '『 CuriosityBot-MD 』'
 global.azami = 'ᬳ⿻⃯🍓͜͡𝑨⃮𝒛ͦ𝒂͎ᷫ𝒎ͨ𝒊⃯ᮭᬳ'
 global.cb = 'CuriosityBot-MD'
 
@@ -71,7 +73,6 @@ global.dirP = raiz//+aniD
 global.media = raiz+'media/'
 global.jadibts = join(__dirname, 'jadibts/')
 
-//━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 global.multiplier = 100 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
 

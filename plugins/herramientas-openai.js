@@ -23,7 +23,7 @@ if (!text) throw `*⚠️ INGRESA UN TEXTO*\n\n❕ EJEMPLO\n${usedPrefix + comma
 m.react('💬')
 try {
 conn.sendPresenceUpdate('composing', m.chat)  
-let jailbreak = await fetch('https://raw.githubusercontent.com/Skidy89/chat-gpt-jailbreak/main/Text.txt').then(v => v.text());
+let jailbreak = await fetch('https://raw.githubusercontent.com/Undefined17/CuriosityBot-MD/main/storage/chat-gpt/uwu-mode.txt').then(v => v.text());
 let chgptdb = global.chatgpt.data.users[m.sender];
 chgptdb.push({ role: 'user', content: text });
 const config = { method: 'post', url: 'https://api.openai.com/v1/chat/completions', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + global.openai_key }, data: JSON.stringify({ 'model': 'gpt-3.5-turbo', 'messages': [{ role: 'system', content: `Eres CuriosityBot-MD, un gran modelo de lenguaje entrenado por OpenAI. Siga cuidadosamente las instrucciones del usuario. Responde usando Markdown..\n${jailbreak}` }, ...chgptdb ]})}

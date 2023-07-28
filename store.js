@@ -7,8 +7,7 @@ import fetch from 'node-fetch'
 import axios from 'axios'
 import moment from 'moment-timezone' 
 
-global.APIs = {
-  
+global.APIs = {  
   amel: 'https://melcanz.com',
   bx: 'https://bx-hunter.herokuapp.com',
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -39,8 +38,7 @@ global.APIs = {
   dhnjing: 'https://dhnjing.xyz'
 },
 
-global.APIKeys = {
-  
+global.APIKeys = {  
   'https://api-alc.herokuapp.com': 'ConfuMods',
   'https://api.reysekha.xyz': 'apirey',
   'https://melcanz.com': 'F3bOrWzY',

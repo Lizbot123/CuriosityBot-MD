@@ -20,22 +20,19 @@ global.suittag = ['59894808483']
 global.mods = ['59894808483'] 
 global.prems = ['59894808483']
 
-
-// I M A G E N E S  EN  L I N K S
-global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
-
 // I M A G E N E S 
-global.aniD = 'ANI_MX_SCANS/'
-//global.dirP = raiz//+aniD
-//global.media = raiz+'media/'
-global.imagen1 = fs.readFileSync(join(dirP,`storage/menus/Menu1.jpg`))
-global.imagen2 = fs.readFileSync(join(dirP,`src/nuevobot.jpg`)) 
-global.imagen3 = fs.readFileSync(join(dirP,`src/Pre Bot Publi.png`))
-global.imagen4 = fs.readFileSync(join(dirP,`storage/menus/Menu2.jpg`))
+global.imagen1 = fs.readFileSync('./storage/menus/Menu1.jpg')
+global.imagen2 = fs.readFileSync('./src/nuevobot.jpg')
+global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png')
+global.imagen4 = fs.readFileSync('./storage/menus/Menu2.jpg')
 global.imagen5 = fs.readFileSync('./storage/menus/Menu1.jpg')
 global.imagen6 = fs.readFileSync('./storage/menus/Menu2.jpg')
 global.imagen7 = fs.readFileSync('./storage/menus/Menu3.jpg')
 global.imagen8 = fs.readFileSync('./storage/menus/Menu4.jpg')
+
+// I M A G E N E S  EN  L I N K S
+global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
+
 
 // S T I C K E R S
 global.packname = 'CuriosityBot-MD.js'

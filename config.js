@@ -81,7 +81,7 @@ global.bmoji = '🍀'
 global.cmoji = '🚀'
 global.dmoji = '☠️'
 
-/*=========== WAIT ===========*/
+/*=========== TEXTOS ===========*/
 global.wait = '*_⌛ C A R G A N D O ▬▬▬▭_*'
 global.waitt = '*_ P R E P A R A N D O_*'
 global.waittt = '*_CASI LISTO 🚀_*'
@@ -89,6 +89,8 @@ global.waittt = '*_CASI LISTO 🚀_*'
 /*=========== FAKE SIZE ===========*/
 global.fsizedoc = '99999999999999'
 global.fpagedoc = '999'
+
+/*=========== DISEÑOS ===========*/
 
 global.multiplier = 100 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
 

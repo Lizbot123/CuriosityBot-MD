@@ -11,6 +11,7 @@ import { platform } from 'process'
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
 const __dirname = global.__dirname(import.meta.url)
 
+/*=========== OWNER ===========*/
 global.owner = [
  ['59894808483', 'Creador 🎨', true],
  ['5214531106422'], ['593968585383'], ['5492266613038'], ['5492266466080'], ['50258115623'], ['573106040746']]  
@@ -20,7 +21,7 @@ global.suittag = ['59894808483']
 global.mods = ['59894808483'] 
 global.prems = ['59894808483']
 
-// I M A G E N E S 
+/*=========== IMÁGENES ===========*/
 global.aniD = 'ANI_MX_SCANS/'
 global.dirP = aniD
 global.media = 'media/'
@@ -34,15 +35,15 @@ global.imagen6 = fs.readFileSync('./storage/menus/Menu2.jpg')
 global.imagen7 = fs.readFileSync('./storage/menus/Menu3.jpg')
 global.imagen8 = fs.readFileSync('./storage/menus/Menu4.jpg')
 
-// I M A G E N E S  EN  L I N K S
+/*=========== IMÁGENES EN LINKS ===========*/
 global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
 
-// S T I C K E R S
+/*=========== STICKERS ===========*/
 global.packname = 'CuriosityBot-MD.js'
 global.author = '@1.0.2'
 global.stickerAMX = fs.readFileSync('./src/Curiosity.webp')
 
-// L I N K S
+/*=========== LINKS ===========*/
 global.yt = 'https://www.youtube.com/@Azami_Mods'
 global.ig = 'https://instagram.com/azami_ofc'
 global.md = 'https://github.com/Undefined17/CuriosityBot-MD'
@@ -53,7 +54,7 @@ global.nnnn = 'https://chat.whatsapp.com/KLpYFsitkgzJ15YQxZrBqO' //colaboración
 global.nnnnn = 'https://chat.whatsapp.com/KlRcEfl8snBEEOA0JXzw5A' //enlace curiosity
 global.nna2 = 'J1R402WH1N0Hdl3S0NDEYu' 
 
-// N O M B R E S 
+/*=========== NOMBRES ===========*/
 global.wm = '᭥𐨏𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕-𝑴𝑫᭢ꪲ'
 global.wm2 = '© CuriosityBot-MD'
 global.wm3 = '⎙ 𝙲𝚞𝚛𝚒𝚘𝚜𝚒𝚝𝚢'
@@ -63,13 +64,13 @@ global.wm6 = 'CuriosityBot-MD • Azami'
 global.azami = 'ᬳ⿻⃯🍓͜͡𝑨⃮𝒛ͦ𝒂͎ᷫ𝒎ͨ𝒊⃯ᮭᬳ'
 global.cb = 'CuriosityBot-MD'
 
-// I N F O
+/*=========== INFO ===========*/
 global.vs = '1.0.2'
 global.library = 'Baileys'
 global.lenguaje = 'Español'
 global.jadibts = join(__dirname, 'jadibts/')
 
-// R E A C C I O N E S
+/*=========== REACCIONES ===========*/
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
@@ -80,12 +81,14 @@ global.bmoji = '🍀'
 global.cmoji = '🚀'
 global.dmoji = '☠️'
 
-// W A I T
+/*=========== WAIT ===========*/
 global.wait = '*_⌛ C A R G A N D O ▬▬▬▭_*'
 global.waitt = '*_ P R E P A R A N D O_*'
 global.waittt = '*_CASI LISTO 🚀_*'
 
-//F A K E
+/*=========== FAKE SIZE ===========*/
+global.fsizedoc = '99999999999999'
+global.fpagedoc = '999'
 
 global.multiplier = 100 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
 

@@ -19,33 +19,26 @@ global.animxscans = ['56962237366']
 global.suittag = ['59894808483'] 
 global.mods = ['59894808483'] 
 global.prems = ['59894808483']
-  
 
-// IMAGENES 
-global.raiz = './'
-global.aniD = 'ANI_MX_SCANS/'
-global.dirP = raiz//+aniD
-global.media = raiz+'media/'
-global.jadibts = join(__dirname, 'jadibts/')
+// I M A G E N E S 
 global.imagen1 = fs.readFileSync(join(dirP,`storage/menus/Menu1.jpg`))
 global.imagen2 = fs.readFileSync(join(dirP,`src/nuevobot.jpg`)) 
 global.imagen3 = fs.readFileSync(join(dirP,`src/Pre Bot Publi.png`))
 global.imagen4 = fs.readFileSync(join(dirP,`storage/menus/Menu2.jpg`))
-global.stickerAMX = fs.readFileSync(join(dirP,`src/Curiosity.webp`))
 global.imagen5 = fs.readFileSync('./storage/menus/Menu1.jpg')
 global.imagen6 = fs.readFileSync('./storage/menus/Menu2.jpg')
 global.imagen7 = fs.readFileSync('./storage/menus/Menu3.jpg')
 global.imagen8 = fs.readFileSync('./storage/menus/Menu4.jpg')
+
+// I M A G E N E S  EN  L I N K S
 global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
 
-//⊱ ━━━━━.⋅ Sticker WM ⋅.━━━━ ⊰
-
+// S T I C K E R S
 global.packname = 'CuriosityBot-MD.js'
 global.author = '@1.0.2'
+global.stickerAMX = fs.readFileSync(join(dirP,`src/Curiosity.webp`))
 
-//━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
-
-//⊱ ━━━━━.⋅ Enlaces ⋅.━━━━ ⊰
+// L I N K S
 
 global.wm2 = '⎙ 𝙲𝚞𝚛𝚒𝚘𝚜𝚒𝚝𝚢'
 global.wm3 = '' 
@@ -69,6 +62,11 @@ global.dmoji = '🤭'
 global.done = '✅'
 global.error = '❌' 
 global.xmoji = '🔥' 
+global.raiz = './'
+global.aniD = 'ANI_MX_SCANS/'
+global.dirP = raiz//+aniD
+global.media = raiz+'media/'
+global.jadibts = join(__dirname, 'jadibts/')
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 

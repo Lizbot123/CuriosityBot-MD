@@ -110,9 +110,11 @@ global.author = '@1.0.2'
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-//⊱ ━━━━━.⋅ Información ⋅.━━━━ ⊰
+//⊱ ━━━━━.⋅ Enlaces ⋅.━━━━ ⊰
 
-global.wm = '『 CuriosityBot-MD 』'
+global.wm2 = '⎙ 𝙲𝚞𝚛𝚒𝚘𝚜𝚒𝚝𝚢'
+global.wm3 = '' 
+global.wm4 = '『 CuriosityBot-MD 』'
 global.azami = 'ᬳ⿻⃯🍓͜͡𝑨⃮𝒛ͦ𝒂͎ᷫ𝒎ͨ𝒊⃯ᮭᬳ'
 global.cb = 'CuriosityBot-MD'
 global.wait = '*_⌛ C A R G A N D O ▬▬▬▭_*'

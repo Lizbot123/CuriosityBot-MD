@@ -18,12 +18,12 @@ const rl = createInterface(process.stdin, process.stdout)
 say('Curiosity\nBot\nMD', {
   font: 'block',
   align: 'center',
-  colors: ['yellow', 'green']
+  colors: ['magenta', 'cyan']
 })
 say(`${name} By @Azami`, {
   font: 'console',
   align: 'center',
-  colors: ['yellowBright']
+  colors: ['blueBright']
 })
 
 var isRunning = false
@@ -38,7 +38,7 @@ function start(file) {
   say([process.argv[0], ...args].join(' '), {
     font: 'console',
     align: 'center',
-    gradient: ['blue', 'red']
+    gradient: ['blue', 'magenta']
   })
   setupMaster({
     exec: args[0],

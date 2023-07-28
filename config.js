@@ -26,8 +26,8 @@ global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
 
 // I M A G E N E S 
 global.aniD = 'ANI_MX_SCANS/'
-global.dirP = raiz//+aniD
-global.media = raiz+'media/'
+//global.dirP = raiz//+aniD
+//global.media = raiz+'media/'
 global.imagen1 = fs.readFileSync(join(dirP,`storage/menus/Menu1.jpg`))
 global.imagen2 = fs.readFileSync(join(dirP,`src/nuevobot.jpg`)) 
 global.imagen3 = fs.readFileSync(join(dirP,`src/Pre Bot Publi.png`))

@@ -65,15 +65,15 @@ global.authFileRespald = join(__dirname, `sesionRespaldo/`)
 global.temp = join(__dirname, 'tmp')
 if (!existsSync(jadibts)) {
   mkdirSync(jadibts);
-  console.log('Directorio jadibts creado exitosamente');
+  console.log('DIRECTORIO jadibts CREADO EXITOSAMENTE');
 }
 if (!existsSync(authFileRespald)) {
   mkdirSync(authFileRespald);
-  console.log('Directorio sesionRespaldo creado exitosamente');
+  console.log('DIRECTORIO sesionRespaldo CREADO EXITOSAMENTE');
 }
 if (!existsSync(temp)) {
   mkdirSync(temp);
-  console.log('Se a creado el directorio tmp correctamente');
+  console.log('SE HA CREADO EL DIRECTORIO tmp CORRECTAMENTE');
 }
 const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
 
@@ -105,7 +105,7 @@ const credsFilePath = path.join(SESSION_DIR, CREDENTIALS_FILE);
   
 
   copyFileSync(credsFilePath, backupFilePath);
-  console.log(`\nSe a creado el archivo de respaldo: ${backupFilePath}`);
+  console.log(`\nSE A CREADO EL ARCHIVO DE RESPALDO: ${backupFilePath}`);
 
 }
  
@@ -126,18 +126,18 @@ function cleanupOnConnectionError() {
     const filePath = path.join(SESSION_DIR, file);
     try {
       unlinkSync(filePath);
-      console.log(`Archivo eliminado: ${filePath}`);
+      console.log(`ARCHIVO ELIMINADO: ${filePath}`);
     } catch (error) {
-      console.log(`No se pudo eliminar el archivo: ${filePath}`);
+      console.log(`NO DE PUDO ELIMINAR EL ARCHIVO: ${filePath}`);
     }
   });
 
   const backupFilePath = path.join(SESSION_BACKUP_DIR, CREDENTIALS_BACKUP_FILE);
   try {
     unlinkSync(backupFilePath);
-    console.log(`Archivo de copia de seguridad eliminado: ${backupFilePath}`);
+    console.log(`ARCHIVO DE COPIA DE SEGURIDAD ELIMINADO: ${backupFilePath}`);
   } catch (error) {
-    console.log(`No se pudo eliminar el archivo de copia de seguridad o no existe: ${backupFilePath}`);
+    console.log(`NO SE PUDO ELIMINAR EL ARCHIVO DE COPIA DE SEGURIDAD O NO EXISTE: ${backupFilePath}`);
   }
   process.send('reset')
 } 
@@ -153,9 +153,9 @@ function credsStatus() {
     const stats = statSync(credsFilePath);
     originalFileValid = stats.isFile() && stats.size > 0;
   } catch (error) {
-    console.log(`El archivo de credenciales no existe o está vacío. Generando código QR...`);
+    console.log(`EL ARCHIVO DE CREDENCIALES NO EXISTE. GENERANDO CÓDIGO QR...`);
     connectionOptions
-      console.log(`Escanea el código QR para continuar.`);
+      console.log(`ESCANEA EL CÓDIGO QR PARA CONTINUAR.`);
   }
   
   if (!originalFileValid) {
@@ -163,14 +163,14 @@ function credsStatus() {
     const backupStats = statSync(backupFilePath);
     if (backupStats.isFile() && backupStats.size > 0) {
       copyFileSync(backupFilePath, credsFilePath);
-      console.log(`Archivo de credenciales restaurado desde la copia de seguridad: ${backupFilePath} -> ${credsFilePath}`);
+      console.log(`ARCHIVO DE CREDENCIALES RESTAURADO DESDE LA COPIA DE SEGURIDAD: ${backupFilePath} -> ${credsFilePath}`);
         process.send('reset')
     } else {
-      console.log(`No se encuentra el archivo de credenciales válido y el archivo de copia de seguridad no es válido o falta: ${credsFilePath}, ${backupFilePath}`);
+      console.log(`NO SE ENCONTRÓ EL ARCHIVO DE CREDENCIALES VÁLIDO Y LA COPIA DE SEGURIDAD ES INVALIDA O FALTA: ${credsFilePath}, ${backupFilePath}`);
       connectionOptions
     }
   } else {
-    console.log('Archivo de respaldo correcto, continuando inicio de sesión');
+    console.log('ARCHIVO DE RESPALDO CORRECTO, CONTINUANDO SESIÓN');
   }
 }
 

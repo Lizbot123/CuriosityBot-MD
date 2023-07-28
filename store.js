@@ -17,7 +17,7 @@ global.lolkeysapi = ['GataDios']
 global.itsrose = ['4b146102c4d500809da9d1ff']  
 
 global.APIs = {  
-  amel: 'https://melcanz.com',
+ amel: 'https://melcanz.com',
   bx: 'https://bx-hunter.herokuapp.com',
   nrtm: 'https://nurutomo.herokuapp.com',
   xteam: 'https://api.xteam.xyz',
@@ -38,7 +38,6 @@ global.APIs = {
   rey: 'https://server-api-rey.herokuapp.com',
   hardianto: 'http://hardianto-chan.herokuapp.com',
   shadow: 'https://api.reysekha.xyz',
-  azami: 'https://azami-mods.herokuapp.com',
   apialc: 'https://api-alc.herokuapp.com',
   botstyle: 'https://botstyle-api.herokuapp.com',
   neoxr: 'https://neoxr-api.herokuapp.com',

@@ -40,24 +40,26 @@ global.stickerAMX = fs.readFileSync(join(dirP,`src/Curiosity.webp`))
 
 // L I N K S
 global.yt = 'https://www.youtube.com/@Azami_Mods'
-global.ig = 'https://instagram.com/azami.19'
-
-global.wm2 = '⎙ 𝙲𝚞𝚛𝚒𝚘𝚜𝚒𝚝𝚢'
-global.wm3 = '' 
-global.wm4 = '『 CuriosityBot-MD 』'
-global.azami = 'ᬳ⿻⃯🍓͜͡𝑨⃮𝒛ͦ𝒂͎ᷫ𝒎ͨ𝒊⃯ᮭᬳ'
-global.cb = 'CuriosityBot-MD'
-global.wait = '*_⌛ C A R G A N D O ▬▬▬▭_*'
-global.vs = '1.0.2'
-global.fsizedoc = '99999999999999'
-
+global.ig = 'https://instagram.com/azami_ofc'
 global.md = 'https://github.com/Undefined17/CuriosityBot-MD'
+global.paypal = 'https://paypal.me/Azami19'
 global.nn = 'https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU' //Grupo ofc
 global.nnn = 'https://chat.whatsapp.com/J1R402WH1N0Hdl3S0NDEYu' //Curiosity global
 global.nnnn = 'https://chat.whatsapp.com/KLpYFsitkgzJ15YQxZrBqO' //colaboración multi bots
 global.nnnnn = 'https://chat.whatsapp.com/KlRcEfl8snBEEOA0JXzw5A' //enlace curiosity
 global.nna2 = 'J1R402WH1N0Hdl3S0NDEYu' 
-global.paypal = 'https://paypal.me/Azami19'
+
+// N O M B R E S 
+global.wm2 = '⎙ 𝙲𝚞𝚛𝚒𝚘𝚜𝚒𝚝𝚢'
+global.wm3 = '' 
+global.wm4 = '『 CuriosityBot-MD 』'
+global.azami = 'ᬳ⿻⃯🍓͜͡𝑨⃮𝒛ͦ𝒂͎ᷫ𝒎ͨ𝒊⃯ᮭᬳ'
+global.cb = 'CuriosityBot-MD'
+
+// I N F O
+global.wait = '*_⌛ C A R G A N D O ▬▬▬▭_*'
+global.vs = '1.0.2'
+global.fsizedoc = '99999999999999'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'

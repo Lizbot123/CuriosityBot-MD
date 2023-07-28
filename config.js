@@ -39,6 +39,8 @@ global.author = '@1.0.2'
 global.stickerAMX = fs.readFileSync(join(dirP,`src/Curiosity.webp`))
 
 // L I N K S
+global.yt = 'https://www.youtube.com/@Azami_Mods'
+global.ig = 'https://instagram.com/azami.19'
 
 global.wm2 = '⎙ 𝙲𝚞𝚛𝚒𝚘𝚜𝚒𝚝𝚢'
 global.wm3 = '' 
@@ -48,8 +50,7 @@ global.cb = 'CuriosityBot-MD'
 global.wait = '*_⌛ C A R G A N D O ▬▬▬▭_*'
 global.vs = '1.0.2'
 global.fsizedoc = '99999999999999'
-global.yt = 'https://www.youtube.com/@Azami_YT'
-global.ig = 'https://instagram.com/azami.19'
+
 global.md = 'https://github.com/Undefined17/CuriosityBot-MD'
 global.nn = 'https://chat.whatsapp.com/LCAUbkf5kUz7jSxO6FADMU' //Grupo ofc
 global.nnn = 'https://chat.whatsapp.com/J1R402WH1N0Hdl3S0NDEYu' //Curiosity global

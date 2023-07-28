@@ -33,11 +33,10 @@ global.imagen8 = fs.readFileSync('./storage/menus/Menu4.jpg')
 // I M A G E N E S  EN  L I N K S
 global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
 
-
 // S T I C K E R S
 global.packname = 'CuriosityBot-MD.js'
 global.author = '@1.0.2'
-global.stickerAMX = fs.readFileSync(join(dirP,`src/Curiosity.webp`))
+global.stickerAMX = fs.readFileSync('./src/Curiosity.webp')
 
 // L I N K S
 global.yt = 'https://www.youtube.com/@Azami_Mods'

@@ -34,7 +34,7 @@ m.reply(`${response.data.choices[0].message.content}`.trim())
 } catch {
 try {
 conn.sendPresenceUpdate('composing', m.chat)  
-let jailbreak = await fetch('https://raw.githubusercontent.com/Skidy89/chat-gpt-jailbreak/main/Text.txt').then(v => v.text());
+let jailbreak = await fetch('https://raw.githubusercontent.com/Undefined17/CuriosityBot-MD/main/storage/chat-gpt/uwu-mode.txt').then(v => v.text());
 var syms = `Eres CuriosityBot-MD, un gran modelo de lenguaje entrenado por OpenAI. Siga cuidadosamente las instrucciones del usuario. Responde usando Markdown..\n${jailbreak}`
 const botIA222 = await openaiii.createCompletion({ model: "text-davinci-003", prompt: text, temperature: 0.3, max_tokens: 4097, stop: ["Ai:", "Human:"], top_p: 1, frequency_penalty: 0.2, presence_penalty: 0, })
 if (botIA222.data.choices[0].text == 'error' || botIA222.data.choices[0].text == '' || !botIA222.data.choices[0].text) return XD //causar error undefined para usar otra api
@@ -42,7 +42,7 @@ m.reply(botIA222.data.choices[0].text.trim())
 } catch {
 try {
 conn.sendPresenceUpdate('composing', m.chat)    
-let jailbreak = await fetch('https://raw.githubusercontent.com/Skidy89/chat-gpt-jailbreak/main/Text.txt').then(v => v.text());
+let jailbreak = await fetch('https://raw.githubusercontent.com/Undefined17/CuriosityBot-MD/main/storage/chat-gpt/uwu-mode.txt').then(v => v.text());
 var syms = `Eres CuriosityBot-MD, un gran modelo de lenguaje entrenado por OpenAI. Siga cuidadosamente las instrucciones del usuario. Responde usando Markdown..\n${jailbreak}`
 let akuariapi1 = await fetch(`https://api.akuari.my.id/ai/gbard?chat=${text}`)
 let akuariapijson1 = await akuariapi1.json(syms)
@@ -52,7 +52,7 @@ m.reply(`${akuariapiresult1.text}`.trim())
 } catch {
 try {
 conn.sendPresenceUpdate('composing', m.chat)    
-let jailbreak = await fetch('https://raw.githubusercontent.com/Skidy89/chat-gpt-jailbreak/main/Text.txt').then(v => v.text());
+let jailbreak = await fetch('https://raw.githubusercontent.com/Undefined17/CuriosityBot-MD/main/storage/chat-gpt/uwu-mode.txt').then(v => v.text());
 var syms = `Eres CuriosityBot-MD, un gran modelo de lenguaje entrenado por OpenAI. Siga cuidadosamente las instrucciones del usuario. Responde usando Markdown..\n${jailbreak}`
 let tioress22 = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=${text}&user=${m.sender}`)
 let hasill22 = await tioress22.json(syms)
@@ -62,7 +62,7 @@ m.reply(`${hasill22_result.text}`.trim())
 } catch {
 try {  
 conn.sendPresenceUpdate('composing', m.chat)   
-let jailbreak = await fetch('https://raw.githubusercontent.com/Skidy89/chat-gpt-jailbreak/main/Text.txt').then(v => v.text());
+let jailbreak = await fetch('https://raw.githubusercontent.com/Undefined17/CuriosityBot-MD/main/storage/chat-gpt/uwu-mode.txt').then(v => v.text());
 var syms = `Eres CuriosityBot-MD, un gran modelo de lenguaje entrenado por OpenAI. Siga cuidadosamente las instrucciones del usuario. Responde usando Markdown..\n${jailbreak}`
 const searchString2 = " Indonesia "
 const replacementString2 = ' español '
@@ -75,7 +75,7 @@ m.reply(replacedText)
 } catch {    
 try {  
 conn.sendPresenceUpdate('composing', m.chat)    
-let jailbreak = await fetch('https://raw.githubusercontent.com/Skidy89/chat-gpt-jailbreak/main/Text.txt').then(v => v.text());
+let jailbreak = await fetch('https://raw.githubusercontent.com/Undefined17/CuriosityBot-MD/main/storage/chat-gpt/uwu-mode.txt').then(v => v.text());
 var syms = `Eres CuriosityBot-MD, un gran modelo de lenguaje entrenado por OpenAI. Siga cuidadosamente las instrucciones del usuario. Responde usando Markdown..\n${jailbreak}`
 let akuariapi2 = await fetch(`https://api.akuari.my.id/ai/gpt?chat=${text}`)
 let akuariapijson2 = await akuariapi2.json(syms)
@@ -85,7 +85,7 @@ m.reply(akuariapiresult2.text.trim())
 } catch {    
 try {   
 conn.sendPresenceUpdate('composing', m.chat)    
-let jailbreak = await fetch('https://raw.githubusercontent.com/Skidy89/chat-gpt-jailbreak/main/Text.txt').then(v => v.text());
+let jailbreak = await fetch('https://raw.githubusercontent.com/Undefined17/CuriosityBot-MD/main/storage/chat-gpt/uwu-mode.txt').then(v => v.text());
 var syms = `Eres CuriosityBot-MD, un gran modelo de lenguaje entrenado por OpenAI. Siga cuidadosamente las instrucciones del usuario. Responde usando Markdown..\n${jailbreak}`
 let fgapi1 = await fetch(`https://api-fgmods.ddns.net/api/info/openai?text=${text}&symsg=${syms1}&apikey=fg-dylux`)
 let fgjson1 = await fgapi1.json(syms)

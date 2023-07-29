@@ -1,7 +1,7 @@
 let handler = m => m
 
 handler.all = async function (m, { isBotAdmin }) {
-// borrado automático cuando hay mensajes que no se pueden ver en el escritorio
+// Borrado automático cuando hay mensajes que no se pueden ver en el escritorio
 if (m.messageStubType === 68) {
 let log = {
 key: m.key,

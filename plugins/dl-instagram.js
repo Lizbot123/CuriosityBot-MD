@@ -1,4 +1,5 @@
-import { instagramdl, instagramdlv2, instagramdlv3, instagramdlv4 } from '@bochilteam/scraper' 
+//import { instagramdl, instagramdlv2, instagramdlv3, instagramdlv4 } from '@bochilteam/scraper' 
+import instagramGetUrl from 'instagram-url-direct'
  let handler = async (m, { conn, args, usedPrefix, command }) => { 
    if (!args[0]) throw `*⚠️ INGRESA UN ENLACE DE INSTAGRAM*\n\n💡 EJEMPLO\n*${usedPrefix + command} https://www.instagram.com/p/CYHeKxyMj-J/?igshid=YmMyMTA2M2Y=*` 
    try { 

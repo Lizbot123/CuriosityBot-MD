@@ -6,7 +6,6 @@ import vm from 'node:vm'
 import {instagram} from '@xct007/frieren-scraper'
 import {instagramdl} from '@bochilteam/scraper'
 const handler = async (m, {conn, args, command, usedPrefix}) => {
-  m.react(done)
   if (!args[0]) throw `*⚠️ INGRESA UN ENLACE DE INSTAGRAM*\n\n💡 EJEMPLO\n*${usedPrefix + command} https://www.instagram.com/p/CYHeKxyMj-J/?igshid=YmMyMTA2M2Y=*`
   m.reply(`_*🚀 C A R G A N D O*_`)
   try {

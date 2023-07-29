@@ -27,7 +27,7 @@
 "url": "https://github.com/Undefined17/CuriosityBot-MD/issues" },
 "license": "GPL-3.0-or-later",
 "dependencies": {
-  "@adiwajshing/baileys": "npm:@queenanya/baileys2@6.4.1",
+  "@whiskeysockets/baileys": "npm:@queenanya/baileys2@6.4.1",
   "@xct007/frieren-scraper": "npm:@xct007/frieren-scraper",
   "@bochilteam/scraper": "4.0.22-alpha.0",
   "@vitalets/google-translate-api": "^8.0.0",

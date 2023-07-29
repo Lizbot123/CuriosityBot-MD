@@ -1,4 +1,3 @@
-
 import fetch from 'node-fetch'
 import { mediafiredl } from '@bochilteam/scraper'
 
@@ -17,8 +16,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
     let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
     let isLimit = (isPrems || isOwner ? limit : limit) * 1012 < filesize
     
-   await conn.reply(m.chat, `💌 *Nombre:* ${filename}\n📊 *Peso:*  ${filesizeH}\n🗂️ *Tipo:* ${ext}\n🗳️ *Subido:* ${aploud}`, ftroli, m)
-   //await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
+   await conn.reply(m.chat, `💌 *Nombre:* ${filename}\n📊 *Peso:*  ${filesizeH}\n🗂️ *Tipo:* ${ext}\n🗳️ *Subido:* ${aploud}`, fgif, m)
     
     if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
     m.react(done)
@@ -30,7 +28,6 @@ handler.help = ['mediafire <url>']
 handler.tags = ['dl']
 handler.command = ['mediafire', 'mfire'] 
 handler.diamond = true
-handler.premium = false
 handler.register = true
 
 export default handler

@@ -5,8 +5,9 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
 	var limit
      if((isOwner || isPrems)) limit = 1000
      else limit = 600
+	m.react(done)
    if (!args[0]) throw `*⚠️ INGRESE UN ENLACE DE MEDIAFIRE*\n\n💡 EJEMPLO\n*${usedPrefix}mediafire* https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk`
-    if (!args[0].match(/mediafire/gi)) throw `*❎ LINK INCORRECTO*`
+    if (!args[0].match(/mediafire/gi)) throw `*⚠️ LINK INCORRECTO*`
     try {
     m.react(rwait)
     let full = /f$/i.test(command)

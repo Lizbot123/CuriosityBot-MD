@@ -2,6 +2,8 @@ import fs from 'fs'
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let fkontak2 = { key: { participant: '0@s.whatsapp.net' }, message: { contactMessage: { displayName: azami, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:XL;${author},;;;\nFN:${author},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, jpegThumbnail: fs.readFileSync('./storage/menus/Menu1.jpg'), thumbnail: fs.readFileSync('./storage/menus/Menu1.jpg'), sendEphemeral: true }}}
+let name = conn.getName(who)
+let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
 let isEnable = /true|enable|(turn)?on|1/i.test(command)
 let chat = global.db.data.chats[m.chat]
 let user = global.db.data.users[m.sender]
@@ -283,7 +285,7 @@ throw false
 }
 conn.reply(m.chat, `🗂️ *OPCIÓN:* ${type} 
 💻 *ESTADO*: ${isEnable ? 'Activado ✅' : 'Desactivado ❌'}
-📡 *PARA*: ${isAll ? 'Este bot 🤖' : isUser ? '' : 'Este chat 💬'}`, fkontak2,  m)
+📡 *PARA*: ${isAll ? 'Este bot 🤖' : isUser ? '' : 'Este chat 💬'}`, fkon,  m)
 
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')

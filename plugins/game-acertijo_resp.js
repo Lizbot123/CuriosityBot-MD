@@ -1,6 +1,6 @@
 import similarity from 'similarity'
 const threshold = 0.72
-let handler = m => m
+let handler = m => m 
 handler.before = async function (m) {
 let id = m.chat
 if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !/^ⷮ/i.test(m.quoted.text)) return !0

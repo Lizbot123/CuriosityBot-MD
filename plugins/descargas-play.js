@@ -4,7 +4,7 @@ import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/
   m.react(rwait)
   try {
     var vid = (await youtubeSearch(text)).video[0]
-    if (!vid) throw '[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝙰𝚄𝙳𝙸𝙾'
+    if (!vid) throw '*⚠️ ERROR, INTENTE DE NUEVO*'
     var { title, 
           description, 
           thumbnail, 
@@ -24,22 +24,22 @@ let lolh = await lolhuman.json()
 let n = lolh.result.title || 'error'
     var tmb = thumbnail
     var captionvid = `
-  *∘ 📑 TÍTULO:*
+  *• 📑 TÍTULO:*
    ${title}
    
- *∘ 📆 PUBLICADO:* 
+ *• 📆 PUBLICADO:* 
   ${publishedTime}
   
-  *∘ ⏰ DURACIÓN:* 
+  *• ⏰ DURACIÓN:* 
   ${durationH}
   
-  *∘ 👀 VISTAS* 
+  *• 👀 VISTAS* 
   ${viewH}  
   
-  *∘ 📡 URL*  
+  *• 📡 URL*  
   ${url}
   
-  *∘ 💬 DESCRIPCIÓN* 
+  *• 💬 DESCRIPCIÓN* 
   ${description}`
     var pesan = await conn.sendMessage(m.chat, {
     text: captionvid,
@@ -68,14 +68,14 @@ let n = lolh.result.title || 'error'
     }}} , { quoted: pesan })
 
   } catch (e) {
-    throw '[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝙰𝚄𝙳𝙸𝙾' 
+    throw '*⚠️ ERROR, INTENTE DE NUEVO*' 
   }
 }
-handler.command = handler.help = ['play','song','youtube','ytmp3','ds','downloadyt','yta'];
-handler.tags = ['dl'];
-handler.exp = 0;
+handler.command = handler.help = ['play','song','youtube','ytmp3','ds','downloadyt','yta']
+handler.tags = ['dl']
+handler.exp = 0
 handler.diamond = true
-handler.premium = false;
+handler.premium = false
 export default handler
 async function cut(url) {
   url = encodeURIComponent(url)
@@ -84,5 +84,5 @@ async function cut(url) {
   return await res.text()
 }
 async function delay(ms) {
-   await new Promise(resolve => setTimeout(resolve, ms));
+   await new Promise(resolve => setTimeout(resolve, ms))
 }

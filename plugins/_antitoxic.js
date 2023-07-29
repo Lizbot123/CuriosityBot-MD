@@ -26,7 +26,6 @@ export async function before(m, {isAdmin, isOwner}) {
     })
     user.banned = true
     await this.groupParticipantsUpdate(m.chat, [m.sender], "remove")
-    //await this.updateBlockStatus(m.sender, 'block')
   }
   return !1
 }

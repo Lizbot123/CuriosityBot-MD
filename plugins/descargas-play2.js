@@ -12,22 +12,22 @@ if (!text) throw `*⚠️ INGRESE EL NOMBRE DE LA CANCIÓN QUE ESTÁ BUSCANDO*\n
     let vide = `https://yt.btch.bz/download?URL=${url}&videoName=video`
     var tmb = thumbnail
     var captionvid = `  
- *∘ 📑 TÍTULO:*
+ *• 📑 TÍTULO:*
    ${title}
    
- *∘ 📆 PUBLICADO:* 
+ *• 📆 PUBLICADO:* 
   ${publishedTime}
   
-  *∘ ⏰ DURACIÓN:* 
+  *• ⏰ DURACIÓN:* 
   ${durationH}
   
-  *∘ 👀 VISTAS* 
+  *• 👀 VISTAS* 
   ${viewH}  
   
-  *∘ 📡 URL*  
+  *• 📡 URL*  
   ${url}
   
-  *∘ 💬 DESCRIPCIÓN* 
+  *• 💬 DESCRIPCIÓN* 
   ${description}`
     var pesan = await conn.sendMessage(m.chat, {
       text: captionvid,

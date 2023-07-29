@@ -6,8 +6,8 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
 	var limit
      if((isOwner || isPrems)) limit = 1000
      else limit = 600
-   if (!args[0]) throw `⚠️ INGRESE UN ENLACE DE MEDIAFIRE`
-    if (!args[0].match(/mediafire/gi)) throw `❎ Link incorrecto`
+   if (!args[0]) throw `*⚠️ INGRESE UN ENLACE DE MEDIAFIRE*`
+    if (!args[0].match(/mediafire/gi)) throw `*❎ LINK INCORRECTO*`
     try {
     m.react(rwait)
     let full = /f$/i.test(command)
@@ -17,7 +17,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
     let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
     let isLimit = (isPrems || isOwner ? limit : limit) * 1012 < filesize
     let caption = `
-╭━─━─━─≪💎≫─━─━─━╮
+
 ║ 🔰 *${wm}*
 ║╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 ║ 📡 *NOMBRE*
@@ -30,6 +30,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
 ║ ${ext}
 ╰━─━─━─≪💎≫─━─━─━╯
 `.trim()
+	    await conn.reply(m.chat, `Nombre
    await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
     
     if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })

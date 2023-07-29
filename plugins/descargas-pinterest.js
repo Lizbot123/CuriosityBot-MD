@@ -7,7 +7,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 📍 *Resultado de:* ${text}
 🔎 *Buscado en:* Pinterest
 
-_© Curiosity_`.trim(), fliveLoc, m)
+_© 2023 Curiosity_`.trim(), fliveLoc, m)
 }
 handler.help = ['pinterest <keyword>']
 handler.tags = ['dl']

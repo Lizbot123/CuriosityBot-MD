@@ -4,7 +4,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 let q = m.quoted ? m.quoted : m
 let mime = (m.quoted ? m.quoted : m.msg).mimetype || ''
 if (!/video|audio/.test(mime)) throw `*⚠️ RESPONDA A UN VIDEO O NOTA DE VOS QUE DESEE CONVERTIR A AUDIO/MP3*`
-let media = await q.download?.()
+let media = await q.download?.() 
 if (!media && !/video/.test(mime)) throw '*⚠️ OCURRIÓ UN ERROR, VUELVA A INTENTARLO*'
 if (!media && !/audio/.test(mime)) throw '*⚠️ OCURRIÓ UN ERROR, VUELVA A INTENTARLO*'
 let audio = await toAudio(media, 'mp4')

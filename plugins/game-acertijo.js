@@ -23,7 +23,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     conn.tekateki[id] = [
        await conn.reply(m.chat, caption, m),
         json, poin,
-        setTimeout(async () => {
+         setTimeout(async () => {
             if (conn.tekateki[id]) await conn.reply(m.chat, `Se acabó el tiempo!\n*Respuesta:* ${json.response}`, conn.tekateki[id][0])
             delete conn.tekateki[id]
         }, timeout)

@@ -7,7 +7,7 @@ import { instagramdl, instagramdlv2, instagramdlv3, instagramdlv4 } from '@bochi
        .catch(async _ => await instagramdlv2(args[0])) 
        .catch(async _ => await instagramdlv3(args[0])) 
        .catch(async _ => await instagramdlv4(args[0])) 
-     for (const { url } of results) await conn.sendFile(m.chat, url, 'instagram.mp4', global.wm, m) 
+     for (const { url } of results) await conn.sendFile(m.chat, url, 'instagram.mp4', wm, m) 
    } catch (e) { 
      console.log(e) 
      m.reply(`*⚠️ ERROR, NO FUE POSIBLE DESCARGAR SU PEDIDO*`) 

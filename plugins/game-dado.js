@@ -5,7 +5,7 @@ const da = [
   'https://tinyurl.com/gdd004',
   'https://tinyurl.com/gdd05',
   'https://tinyurl.com/gdd006'
-];
+]
 let handler = async (m, { conn }) => {
   conn.sendFile(m.chat, pickRandom(da), 'dado.webp', '', m)
 }

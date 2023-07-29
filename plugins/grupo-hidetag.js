@@ -1,4 +1,4 @@
-import { generateWAMessageFromContent } from '@adiwajshing/baileys'
+import { generateWAMessageFromContent } from '@whiskeysockets/baileys'
 import * as fs from 'fs'
 let handler = async (m, { conn, text, participants, isOwner, isAdmin }) => {
 try {  
@@ -43,7 +43,7 @@ export default handler
 
 
 /*import * as fs from 'fs' 
- import { generateWAMessageFromContent } from '@adiwajshing/baileys' 
+ import { generateWAMessageFromContent } from '@whiskeysockets/baileys' 
  let handler = async (m, { conn, text, participants }) => { 
    let users = participants.map(u => conn.decodeJid(u.id)) 
    let quoted = m.quoted ? m.quoted : m 

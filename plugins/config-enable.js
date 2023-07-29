@@ -23,9 +23,9 @@ chat.welcome = isEnable
 break
 case 'autolevelup':
 case 'levelup':
-    isUser = true
-     user.autolevelup = isEnable
-     break
+isUser = true
+user.autolevelup = isEnable
+break
 case 'simsimi':
 case 'simi':
 case 'chatbot':
@@ -97,14 +97,13 @@ throw false
 chat.antiLink2 = isEnable 
 break
 case 'antitraba':
-      if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn)
-          throw false
-        }
-      }
-      chat.antitraba = isEnable
-      break 
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.antitraba = isEnable
+break 
 case 'antitoxic':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -170,19 +169,18 @@ throw false
 global.opts['autoread'] = isEnable
 break
 case 'sololatinos':
-      case 'sololatino':
-      case 'onlylatinos':
-      case 'onlylat':
-      case 'antiarabe':
-      case 'antifake':
-      if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn)
-          throw false
-        }
-      }
-      chat.onlyLatinos = isEnable
-      break
+case 'sololatino':
+case 'onlylatinos':
+case 'onlylat':
+case 'antiarabe':
+case 'antifake':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.onlyLatinos = isEnable
+break
 case 'modoadmin':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -210,14 +208,14 @@ throw false
 global.opts['gconly'] = isEnable
 break
 case 'nsfw':
-      case '+18':
-       if (m.isGroup) {
-         if (!(isAdmin || isOwner)) {
-           global.dfail('admin', m, conn)
-            throw false
-           }}
-    chat.nsfw = isEnable          
-    break
+case '+18':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.nsfw = isEnable          
+break
 case 'antiprivado':
 isAll = true
 if (!isROwner) {

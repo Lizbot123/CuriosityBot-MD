@@ -21,7 +21,7 @@ let name = await conn.getName(who)
 
 conn.reply(m.chat, info, m, { contextInfo: {
           externalAdReply :{
-    mediaUrl: ig,
+    mediaUrl: ig, 
     mediaType: 2,
     title: wm,
     body: azami,

@@ -20,7 +20,7 @@ m.reply(e + '')
 text = args.join(' ')
 if (!text) throw `*⚠️ INGRESE EL TEXTO QUE QUIERA CONVERTIR EN NOTA DE VOZ*\n\n💡 EJEMPLO:\n*${usedPrefix + command} es Hola Mundo*`
 res = await tts(text, defaultLang)
-} finally {
+} finally { 
 if (res) conn.sendFile(m.chat, res, 'tts.opus', null, m, true)
 }}
 handler.help = ['tts <lang> <teks>']

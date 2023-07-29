@@ -5,11 +5,10 @@ if (!text) throw `*⚠️ INGRESE UN TEXTO*\n\n💡 EJEMPLO\n*${usedPrefix + com
 const res = await googleImage(text)
 let image = res.getRandom()
 let link = image
-conn.sendFile(m.chat, link, 'error.jpg', `
-📍 *Resultado de:* ${text}
+conn.sendFile(m.chat, link, 'error.jpg', `📍 *Resultado de:* ${text}
 🔎 *Buscado en:* Google
 
-© Curiosity`, fliveLoc, m) 
+_© Curiosity_`, fliveLoc, m) 
 }
 handler.help = ['gimage <query>', 'imagen <query>']
 handler.tags = ['dl']

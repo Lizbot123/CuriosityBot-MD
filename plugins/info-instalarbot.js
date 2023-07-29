@@ -1,4 +1,4 @@
-import { generateWAMessageFromContent } from '@adiwajshing/baileys'
+import { generateWAMessageFromContent } from '@whiskeysockets/baileys'
 let handler  = async (m, { conn }) => {
 let texto = `
 ╭─────────────┈⊷

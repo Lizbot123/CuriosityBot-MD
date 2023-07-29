@@ -1,4 +1,4 @@
-import * as baileys from '@whiskeysockets/baileys'
+/* import * as baileys from '@whiskeysockets/baileys'
 
 let handler = async (m, { conn, text }) => {
 	let [, code] = text.match(/chat\.whatsapp\.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i) || []
@@ -35,3 +35,4 @@ const extractGroupMetadata = (result) => {
 	}
 	return metadata
 }
+*/

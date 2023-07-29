@@ -26,7 +26,6 @@ mentions: [m.sender],
 })
 user.banned = false
 await this.groupParticipantsUpdate(m.chat, [m.sender], "remove")
-global.db.data.users[m.sender].limit -= 20
 }
 return !1
 }

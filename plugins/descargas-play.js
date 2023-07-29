@@ -4,7 +4,7 @@ import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/
   m.react(rwait)
   try {
     var vid = (await youtubeSearch(text)).video[0]
-    if (!vid) throw '*⚠️ ERROR, INTENTE DE NUEVO*'
+    if (!vid) throw '*⚠️ ERROR, NO FUE POSIBLE DESCARGAR EL AUDIO*'
     var { title, 
           description, 
           thumbnail, 
@@ -68,7 +68,7 @@ let n = lolh.result.title || 'error'
     }}} , { quoted: pesan })
 
   } catch (e) {
-    throw '*⚠️ ERROR, INTENTE DE NUEVO*' 
+    throw '*⚠️ NO FUE POSIBLE DESCARGAR EL AUDIO. CORROBORÉ QUE EL NOMBRE DEL VIDEO SEA CORRECTO*' 
   }
 }
 handler.command = handler.help = ['play','song','youtube','ytmp3','ds','downloadyt','yta']

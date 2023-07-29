@@ -11,7 +11,7 @@ try {
 📍 *Usuario:* ${p.unique_id}
 ⏰ *Duración:* ${p.duration}
 📄 *Descripción:* ${p.description}\n\n_© 2023 Curiosity_`
-    conn.sendFile(m.chat, p.play, 'tiktok.mp4', te, m)
+    conn.sendFile(m.chat, p.play, 'tiktok.mp4', fgif, m)
     m.react(done)
     } catch {  	
     try { 

@@ -156,22 +156,7 @@ handler.all = async function (m) {
             message: { "liveLocationMessage": { "title": "Azami","h": wm, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}
            }
 
-	global.ftroli = { key: { remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { itemCount: 2023, status: 1, thumbnail: await conn.resize(await getBuffer(imagen1),300,150), surface: 1, message: wm, orderTitle: wm, sellerJid: '0@s.whatsapp.net' } } }
-		global.fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg'), thumbnail: fs.readFileSync('./storage/menus/Menu1.jpg'),sendEphemeral: true}}}
-        global.fvn = {
-            key: { 
-                 fromMe: false,
-                 participant: `0@s.whatsapp.net`, ...(m.chat ? 
-            { remoteJid: "6285736178354-1625305606@g.us" } : {}) 
-                       },
-            message: { 
-               "audioMessage": {
-                        "mimetype":"audio/ogg; codecs=opus",
-                        "seconds": "999999999999",
-                        "ptt": "true"
-                               }
-                             }
-	}
+	
                
 
 } 

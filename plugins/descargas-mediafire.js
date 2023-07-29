@@ -17,7 +17,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
     let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
     let isLimit = (isPrems || isOwner ? limit : limit) * 1012 < filesize
     
-   await conn.reply(m.chat, `💌 *Nombre:* ${filename}\n📊 *Peso:*  ${filesizeH}\n🗂️ *Tipo:* ${ext}\n🗳️ *Subido:* ${aploud}`, fvn, m)
+   await conn.reply(m.chat, `💌 *Nombre:* ${filename}\n📊 *Peso:*  ${filesizeH}\n🗂️ *Tipo:* ${ext}\n🗳️ *Subido:* ${aploud}`, ftroli, m)
    //await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
     
     if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })

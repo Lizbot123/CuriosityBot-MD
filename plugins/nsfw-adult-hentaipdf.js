@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 import PDFDocument from "pdfkit"
-import { extractImageThumb } from "@adiwajshing/baileys"
+import { extractImageThumb } from "@whiskeysockets/baileys"
 let handler = async (m, { conn, text, usedPrefix, command, args }) => {
 if (!global.db.data.chats[m.chat].nsfw) throw `🚫 El grupo no admite contenido +18\n\nPara habilitar escriba \n*${usedPrefix}enable* nsfw`
     let user = global.db.data.users[m.sender].age

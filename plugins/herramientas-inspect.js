@@ -10,7 +10,7 @@ let handler = async (m, { conn, text }) => {
 	if (pp) return conn.sendMessage(m.chat, { image: { url: pp }, caption: txt }, { quoted: m })
 	let groupinfo = `🗂️ *ID:* ${data.id}\n💌 *Nombre:* ${data.subject}\n📍 *Creado:* ${data.creation}\n🎨 *Dueño:* ${data.owner}`
 	let descripcion = `${data.desc}`
-	await conn.reply(m.chat, groupinfo, m)
+	await conn.reply(m.chat, groupinfo, fliveLoc, m)
          conn.reply.(m.chat, descripcion, fgif, m)
 	//m.reply(txt)
 }

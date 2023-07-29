@@ -15,7 +15,7 @@ switch (true) {
 case isCommand7:
 if (!text) throw `*⚠️ INGRESE UN ENLACE DE FACEBOOK*\n\n💡 EJEMPLO\n💬 *${usedPrefix}${command}* https://fb.watch/kAOXy3wf2L/?mibextid=Nif5oz\n\n💻 *${usedPrefix}${command}* https://www.facebook.com/reel/1662783117489590?s=yWDuG2&fs=e&mibextid=Nif5oz`
 if (!args[0].match(/www.facebook.com|fb.watch|web.facebook.com|business.facebook.com|video.fb.com/g)) throw '*⚠️ NO ES UN ENLACE VÁLIDO, RECUERDE USAR UN ENLACE DE VÍDEO DE FACEBOOK*'
-await m.reply(`*ESPERE UN MOMENTO 🚀*`)
+await m.reply(`*ESPERE UN MOMENTO 🚀🚀*`)
 m.react(done)
 let messageType = checkMessageType(args[0])
 let message = ''

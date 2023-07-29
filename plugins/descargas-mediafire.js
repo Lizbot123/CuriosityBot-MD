@@ -30,7 +30,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
 ║ ${ext}
 ╰━─━─━─≪💎≫─━─━─━╯
 `.trim()
-	    await conn.reply(m.chat, `💌 *Nombre*: ${filename}\n`
+	    await conn.reply(m.chat, `💌 *Nombre*: ${filename}\n📊 *Peso*:`
    await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
     
     if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })

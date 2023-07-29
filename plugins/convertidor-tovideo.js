@@ -5,7 +5,7 @@ if (!m.quoted) throw `*⚠️ RESPONDE CON ${usedPrefix + command} AL AUDIO QUE 
 let mime = m.quoted.mimetype || ''
 if (!/webp|audio/.test(mime)) throw `*⚠️ RESPONDE CON ${usedPrefix + command} AL AUDIO QUE DESEEA CONVERTIR EN VIDEO*`
 let media = await m.quoted.download()
-let out = Buffer.alloc(0)
+let out = Buffer.alloc(0) 
 if (/webp/.test(mime)) {
 out = await webp2mp4(media)
 } else if (/audio/.test(mime)) {

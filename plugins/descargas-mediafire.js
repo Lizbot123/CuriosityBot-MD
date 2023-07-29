@@ -16,22 +16,9 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
     let res = await mediafiredl(args[0])
     let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
     let isLimit = (isPrems || isOwner ? limit : limit) * 1012 < filesize
-    let caption = `
-
-║ 🔰 *${wm}*
-║╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
-║ 📡 *NOMBRE*
-║ 
-║╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
-║ 📊 *PESO*
-║ ${filesizeH}
-║╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
-║ 🚀 *TIPO*
-║ ${ext}
-╰━─━─━─≪💎≫─━─━─━╯
-`.trim()
-	    await conn.reply(m.chat, `💌 *Nombre*: ${filename}\n📊 *Peso*:`
-   await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
+    
+   await conn.reply(m.chat, `💌 *Nombre:* ${filename}\n📊 *Peso:*  ${filesizeH}\n🗂️ *Tipo:* ${ext}`
+   //await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
     
     if(!isLimit) await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
     m.react(done)

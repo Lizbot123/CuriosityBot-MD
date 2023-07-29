@@ -4,7 +4,7 @@ import instagramGetUrl from 'instagram-url-direct'
    if (!args[0]) throw `*⚠️ INGRESA UN ENLACE DE INSTAGRAM*\n\n💡 EJEMPLO\n*${usedPrefix + command} https://www.instagram.com/p/CYHeKxyMj-J/?igshid=YmMyMTA2M2Y=*` 
    try { 
      await m.reply('_*🚀 C A R G A N D O*_') 
-     const results = await instagramGetUrl(args[0]) 
+     const results = await instagramGetUrl(args[0])).url_list[0
      for (const { url } of results) await conn.sendFile(m.chat, url, 'instagram.mp4', wm, m) 
    } catch (e) { 
      console.log(e) 

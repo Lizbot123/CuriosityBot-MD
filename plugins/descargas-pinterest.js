@@ -4,10 +4,9 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
   m.react(rwait)
   const json = await pinterest(text)
   conn.sendFile(m.chat, json.getRandom(), 'pinterest.jpg', `
-┅━━═❏ *PINTEREST* ❏═━━┅
 💻 *Resultado de:* ${text}
 🔎 *Buscado en:* Pinterest
-`.trim(), m)
+`.trim(), fliveLoc, m)
 }
 handler.help = ['pinterest <keyword>']
 handler.tags = ['dl']

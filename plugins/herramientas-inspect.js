@@ -11,7 +11,7 @@ let handler = async (m, { conn, text }) => {
 	let groupinfo = `🗂️ *ID:* ${data.id}\n💌 *Nombre:* ${data.subject}\n📍 *Creado:* ${data.creation}\n🎨 *Dueño:* ${data.owner}`
 	let descripcion = `${data.desc}`
 	await conn.reply(m.chat, groupinfo, m)
-         conn.reply.(m.chat, descripcion, m)
+         conn.reply.(m.chat, descripcion, fgif, m)
 	//m.reply(txt)
 }
 handler.tags = ['tools']

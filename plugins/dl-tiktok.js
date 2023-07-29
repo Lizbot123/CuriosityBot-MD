@@ -20,7 +20,7 @@ try {
          .catch(async _ => await tiktokdlv3(args[0]))
     const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd
     if (!url) throw '*⚠️ ERROR AL DESACARGAR EL VÍDEO*'
-    conn.sendFile(m.chat, url, 'fb.mp4', ``🎨 *Nombre:* ${nickname}\n📊 *Descripción:* ${description}` : ''}`, m)
+    conn.sendFile(m.chat, url, 'fb.mp4', `🎨 *Nombre:* ${nickname}\n📊 *Descripción:* ${description}`, m)
 m.react(done)
 } catch {
     m.reply(`*⚠️ ERROR AL DESCARGAR EL VÍDEO*`)

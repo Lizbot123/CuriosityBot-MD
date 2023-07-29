@@ -283,7 +283,7 @@ throw false
 }
 conn.reply(m.chat, `🗂️ *OPCIÓN:* ${type} 
 💻 *ESTADO*: ${isEnable ? 'Activado ✅' : 'Desactivado ❌'}
-📡 *PARA*: ${isAll ? 'Este bot 🤖' : isUser ? '' : 'Este chat 💬'}`, fkon,  m)
+📡 *PARA*: ${isAll ? 'Este bot 🤖' : isUser ? '' : 'Este chat 💬'}`, gclink,  m)
 
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')

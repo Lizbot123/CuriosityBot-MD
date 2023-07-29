@@ -11,7 +11,7 @@ let name = await conn.getName(who)
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
   if (!mime) throw '*⚠️ RESPONDA A UNA IMAGEN*'
-	m.react(rwait)
+	m.react(done)
   let media = await q.download()
   let isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
   let link = await (isTele ? uploadImage : uploadFile)(media)

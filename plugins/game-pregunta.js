@@ -4,10 +4,10 @@ m.react('🤔')
 m.reply(`❓ P R E G U N T A S ❓
 
 *❤️ Pregunta:*
-😸 ${text}
+${text}
 ----------------------
 *✉️ Respuesta:* 
-🙀 ${['Si','Tal vez sí','Posiblemente','Probablemente no','No','Imposible', 'No sabría decirte'].getRandom()}
+${['Si','Tal vez sí','Posiblemente','Probablemente no','No','Imposible', 'No sabría decirte'].getRandom()}
 `.trim(), null, m.mentionedJid ? {
 mentions: m.mentionedJid
 } : {})}

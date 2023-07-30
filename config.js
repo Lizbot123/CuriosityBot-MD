@@ -15,6 +15,7 @@ const __dirname = global.__dirname(import.meta.url)
 global.owner = [
  ['59894808483', 'Creador 🎨', true],
  ['50258115623', 'Wilmer - Colaborador 😼'],
+ ['240222036871', 'COLAB - Owner', true], 
  ['5214531106422'], ['593968585383'], ['5492266613038'], ['5492266466080'], ['573106040746']]  
 
 global.animxscans = ['56962237366']

@@ -1,6 +1,6 @@
 let reg = 60
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-let fa = `*⚠️ CUANTO QUIERES APOSTAR?
+let fa = `*⚠️ CUANTO QUIERES APOSTAR?*
 
 💡 EJEMPLO:
 *${usedPrefix + command}* 100`.trim()

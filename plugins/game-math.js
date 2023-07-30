@@ -26,7 +26,7 @@ conn.math[id] = [
 await conn.reply(m.chat, `▢ CUANTO ES *${math.str}*=\n\n_Tiempo:_ ${(math.time / 1000).toFixed(2)} segundos\n\n🎁 Recompensa : ${math.bonus} XP`, m),
 math, 4,
 setTimeout(() => {
-if (conn.math[id]) conn.reply(m.chat, `⏳ Se acabó el tiempo!\nLa respuesta es : *${math.result}*`, conn.math[id][0])
+if (conn.math[id]) conn.reply(m.chat, `⏰ Se acabó el tiempo!\nLa respuesta es : *${math.result}*`, conn.math[id][0])
 delete conn.math[id]
 }, math.time)
 ]

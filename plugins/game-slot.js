@@ -9,13 +9,13 @@ if (isNaN(args[0])) throw fa
 let apuesta = parseInt(args[0])
 let users = global.db.data.users[m.sender]
 let time = users.lastslot + 10000
-if (new Date - users.lastslot < 10000) throw `*⏰ ESPERE *${msToTime(time - new Date())}* PARA USAR DE NUEVO`
+if (new Date - users.lastslot < 10000) throw `*⏰ ESPERE ${msToTime(time - new Date())} PARA USAR DE NUEVO*`
 if (apuesta < 50) throw '*⚠️ LO MÍNIMO PARA APOSTAR ES 100 XP*'
 if (users.exp < apuesta) {
 throw `*⚠️ NO TIENES SUFICIENTE XP*`
 }
 
-let emojis = ["🎁", "💎", "🌟"];
+let emojis = ["🍏", "🍒", "🌟"];
 let a = Math.floor(Math.random() * emojis.length)
 let b = Math.floor(Math.random() * emojis.length)
 let c = Math.floor(Math.random() * emojis.length)

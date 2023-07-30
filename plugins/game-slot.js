@@ -50,9 +50,7 @@ users.exp -= apuesta
 }
 users.lastslot = new Date * 1
 return await m.reply(
-`🍀 *CURIOSITY - SLOT* 🍀
-        
-🎰 ┃ *SLOTS* 
+`🎰 ┃ *SLOTS* 
 ───────────
 ${x[0]} : ${y[0]} : ${z[0]}
 ${x[1]} : ${y[1]} : ${z[1]}

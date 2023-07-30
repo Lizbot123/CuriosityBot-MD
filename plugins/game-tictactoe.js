@@ -6,7 +6,7 @@ if (Object.values(conn.game).find(room => room.id.startsWith('tictactoe') && [ro
 if (!text) throw `*⚠️ PONGA UN NOMBRE A LA SALA*`
 let room = Object.values(conn.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
 if (room) {
-m.reply('✅ COMPAÑERO ENCONTRADO')
+m.reply('*✅ COMPAÑERO ENCONTRADO*')
 room.o = m.chat
 room.game.playerO = m.sender
 room.state = 'PLAYING'
@@ -53,7 +53,7 @@ state: 'WAITING'
 }
 if (text) room.name = text
         
-conn.reply(m.chat, `*Esperando pareja*\nEscriba el siguiente comando para aceptar\n*${usedPrefix + command} ${text}*\n🎁 Recompensa: *4999 XP*`, m, {
+conn.reply(m.chat, `*Esperando pareja*\n\nEscriba el siguiente comando para aceptar\n*${usedPrefix + command} ${text}*\n🎁 Recompensa: *4999 XP*`, m, {
 mentions: conn.parseMention(text)
 })
         

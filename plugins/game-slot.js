@@ -15,7 +15,7 @@ if (users.exp < apuesta) {
 throw `*⚠️ NO TIENES SUFICIENTE XP*`
 }
 
-let emojis = ["🍏", "🍒", "🌟"];
+let emojis = ["🍩", "🍧", "🍓"];
 let a = Math.floor(Math.random() * emojis.length)
 let b = Math.floor(Math.random() * emojis.length)
 let c = Math.floor(Math.random() * emojis.length)

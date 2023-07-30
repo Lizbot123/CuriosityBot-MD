@@ -3,7 +3,7 @@ if (!text) throw `*⚠️ INGRESE UN TEXTO A PREGUNTAR*\n\n💡 EJEMPLO:\n*${use
 m.react('🤔') 
 m.reply(`❓ P R E G U N T A S ❓
 
-*❤️ Pregunta:*
+*🗒️ Pregunta:*
 ${text}
 ----------------------
 *✉️ Respuesta:* 

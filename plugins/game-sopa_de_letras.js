@@ -1,4 +1,7 @@
-//CREADO POR @gata_dios
+/* 
+* CREADO POR @gata_dios
+* DEJEN CRÉDITOS ❗❗
+*/
  
 let fila, columna, sopaNube, sopaPalabra, sopaDir, userSP, cambioLetra, diamante = null
 let intentos = 0

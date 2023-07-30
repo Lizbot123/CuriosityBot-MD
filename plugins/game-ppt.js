@@ -12,14 +12,13 @@ astro = 'tijera'
 astro = 'papel'
 }
 
-
 if (text == astro) {
 global.db.data.users[m.sender].exp += 100
 m.reply(`🤡 *EMPATE*\n\nTú : ${text}\nEl Bot : ${astro}\n\n🎁 Puntos (±)100 XP`)
 } else if (text == 'piedra') {
 if (astro == 'tijera') {
 global.db.data.users[m.sender].exp += 300
-m.reply(`🎊 *GANASTE* 🎊\n\n✧ Tú : ${text}\n✧ El Bot : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
+m.reply(`🎊 *GANASTE* 🎊\n\nTú : ${text}\nEl Bot : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
 } else {
 global.db.data.users[m.sender].exp -= 300
 m.reply(`🤯 *PERDISTE*\n\nTú : ${text}\nEl Bot : ${astro}\n\n Puntos *-${poin} XP*`)
@@ -28,21 +27,21 @@ m.reply(`🤯 *PERDISTE*\n\nTú : ${text}\nEl Bot : ${astro}\n\n Puntos *-${poin
 if (astro == 'papel') {
 global.db.data.users[m.sender].exp += 500
 m.reply(` 🎊 *GANASTE* 🎊\n\nTú : ${text}\nEl Bot : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
-        } else {
-          global.db.data.users[m.sender].exp -= 150
-            m.reply(`🤯 *PERDISTE*\n\nTú : ${text}\nEl Bot : ${astro}\n\nPuntos *-${poin} XP*`)
-        }
-    } else if (text == 'papel') {
-        if (astro == 'piedra') {
-            global.db.data.users[m.sender].exp += 600
-            m.reply(`🎊 *GANASTE* 🎊\n\nTú : ${text}\nEl Bot : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
-        } else {
-          global.db.data.users[m.sender].exp -= 300
-            m.reply(`🤯 *PERDISTE*\n\nTú : ${text}\nEl Bot : ${astro}\n\nPuntos *-${poin} XP*`)
-        }
-    } else {
-        throw reseqv
-    }
+} else {
+global.db.data.users[m.sender].exp -= 150
+m.reply(`🤯 *PERDISTE*\n\nTú : ${text}\nEl Bot : ${astro}\n\nPuntos *-${poin} XP*`)
+}
+} else if (text == 'papel') {
+if (astro == 'piedra') {
+global.db.data.users[m.sender].exp += 600
+m.reply(`🎊 *GANASTE* 🎊\n\nTú : ${text}\nEl Bot : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
+} else {
+global.db.data.users[m.sender].exp -= 300
+m.reply(`🤯 *PERDISTE*\n\nTú : ${text}\nEl Bot : ${astro}\n\nPuntos *-${poin} XP*`)
+}
+} else {
+throw reseqv
+}
 }
 handler.help = ['ppt <piedra/papel/tijera>']
 handler.tags = ['game']

@@ -1,4 +1,4 @@
-let handler = async (m, { conn, args, usedPrefix, command }) => {
+/*let handler = async (m, { conn, args, usedPrefix, command }) => {
     conn.math = conn.math ? conn.math : {}
     m.react('') 
     if (args.length < 1) throw `
@@ -38,11 +38,11 @@ handler.register = true
 
 let modes = {
     noob: [-3, 3,-3, 3, '+-', 15000, 10],
-  fácil: [-10, 10, -10, 10, '*/+-', 20000, 40],
-  normal: [-40, 40, -20, 20, '*/+-', 40000, 150],
-  difícil: [-100, 100, -70, 70, '*/+-', 60000, 350],
-  extremo: [-999999, 999999, -999999, 999999, '*/', 99999, 9999],
-  imposible: [-99999999999, 99999999999, -99999999999, 999999999999, '*/', 30000, 35000],
+  fácil: [-10, 10, -10, 10, '+-', 20000, 40],
+  normal: [-40, 40, -20, 20, '+-', 40000, 150],
+  difícil: [-100, 100, -70, 70, '+-', 60000, 350],
+  extremo: [-999999, 999999, -999999, 999999, '', 99999, 9999],
+  imposible: [-99999999999, 99999999999, -99999999999, 999999999999, '/', 30000, 35000],
   imposible2: [-999999999999999, 999999999999999, -999, 999, '/', 30000, 50000]
 }
 
@@ -82,4 +82,4 @@ function pickRandom(list) {
 
 handler.modes = modes
 
-export default handler
+export default handler*/

@@ -45,7 +45,7 @@ users.exp += apuesta + apuesta
 end = `🌟 *Casi lo logras sigue intentando :)*\nTen *+${reg} XP*`
 users.exp += reg
 } else {
-end = `🤡 *PERDISTE* 🤡\n*-${apuesta} XP*`
+end = `🤯 *PERDISTE* 🤯\n*-${apuesta} XP*`
 users.exp -= apuesta
 }
 users.lastslot = new Date * 1

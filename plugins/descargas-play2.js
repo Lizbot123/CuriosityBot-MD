@@ -25,8 +25,8 @@ if (!text) throw `*⚠️ INGRESE EL NOMBRE DE LA CANCIÓN QUE ESTÁ BUSCANDO*\n
 *∘ 🆔 *ID :* ${yt_play[0].videoId}
 *∘ 🪬 *TIPO :* ${yt_play[0].type}
 *∘ 📡 URL*  ${yt_play[0].url}\n
-∘ *_Enviando ${additionalText}, aguarde un momento．．．_*`.trim();
-var pesan = await conn.sendMessage(m.chat, {
+∘ *_Enviando ${additionalText}, aguarde un momento．．．_*`
+await conn.sendMessage(m.chat, {
     text: texto1,
     contextInfo: {
     externalAdReply: {

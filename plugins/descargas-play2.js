@@ -44,7 +44,18 @@ var pesan = await conn.sendMessage(m.chat, {
         const formats = await bestFormat(yt_play[0].url, 'audio');
         const dl_url = await getUrlDl(formats.url);
         const buff = await getBuffer(dl_url.download);
-        conn.sendMessage(m.chat, {audio: buff, fileName: yt_play[0].title + '.mp3', mimetype: 'audio/mp4'}, {quoted: m});
+        conn.sendMessage(m.chat, { audio: { url: buff }, mimetype: 'audio/mpeg', contextInfo: {
+    externalAdReply: {
+    title: yt_play[0].title,
+    body: "",
+    thumbnailUrl: tmb,
+    sourceUrl: web,
+    mediaType: 1,
+    showAdAttribution: true,
+    renderLargerThumbnail: true
+    }}} , { quoted: pesan })
+    m.react(done)
+        //conn.sendMessage(m.chat, {audio: buff, fileName: yt_play[0].title + '.mp3', mimetype: 'audio/mp4'}, {quoted: m});
       } catch (errors) {
         console.log(errors);
         try {
@@ -64,12 +75,14 @@ var pesan = await conn.sendMessage(m.chat, {
     showAdAttribution: true,
     renderLargerThumbnail: true
     }}} , { quoted: pesan })
+    m.react(done)
          // await conn.sendFile(m.chat, dl_url, ttl + '.mp3', null, m, false, {mimetype: 'audio/mp4'});
         } catch {
           try {
             const dataRE = await fetch(`https://api.akuari.my.id/downloader/youtube?link=${yt_play[0].url}`);
             const dataRET = await dataRE.json();
             conn.sendMessage(m.chat, {audio: {url: dataRET.mp3[1].url}, fileName: yt_play[0].title + '.mp3', mimetype: 'audio/mp4'}, {quoted: m});
+            m.react(done)
           } catch {
             try {
               const humanLol = await fetch(`https://api.lolhuman.xyz/api/ytplay?apikey=${lolkeysapi}&query=${yt_play[0].title}`);
@@ -84,6 +97,7 @@ var pesan = await conn.sendMessage(m.chat, {
     showAdAttribution: true,
     renderLargerThumbnail: true
     }}} , { quoted: pesan })
+    m.react(done)
             //  conn.sendMessage(m.chat, {audio: {url: humanRET.result.audio.link}, fileName: yt_play[0].title + '.mp3', mimetype: 'audio/mp4'}, {quoted: m});
             } catch {
               try {
@@ -100,6 +114,7 @@ var pesan = await conn.sendMessage(m.chat, {
     showAdAttribution: true,
     renderLargerThumbnail: true
     }}} , { quoted: pesan })
+    m.react(done)
                // await conn.sendMessage(m.chat, {audio: {url: lolh.result.link}, fileName: `${n}.mp3`, mimetype: 'audio/mp4'}, {quoted: m});
               } catch {
                 try {
@@ -117,9 +132,10 @@ var pesan = await conn.sendMessage(m.chat, {
     showAdAttribution: true,
     renderLargerThumbnail: true
     }}} , { quoted: pesan })
+    m.react(done)
                 //  conn.sendMessage(m.chat, {audio: {url: ress.url}, fileName: __res[0].title + '.mp3', mimetype: 'audio/mp4'}, {quoted: m});
                 } catch {
-                  await conn.reply(m.chat, '*[⚠️] ERROR AUDIO NO FUE POSIBLE DESCARGAR*', m);
+                  await conn.reply(m.chat, '*[ ⚠️ ] ERROR, NO FUE POSIBLE DESCARGAR EL AUDIO*', m);
                 }
               }
             }
@@ -136,11 +152,13 @@ var pesan = await conn.sendMessage(m.chat, {
         const dl_url = await yt.video[q].download();
         const ttl = await yt.title;
         const size = await yt.video[q].fileSizeH;
-        await await conn.sendMessage(m.chat, {video: {url: dl_url}, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `▢ 𝚃𝙸𝚃𝚄𝙻𝙾: ${ttl}\n▢ 𝙿𝙴𝚂𝙾 𝙳𝙴𝙻 𝚅𝙸𝙳𝙴𝙾: ${size}`, thumbnail: await fetch(yt.thumbnail)}, {quoted: m});
+        await await conn.sendMessage(m.chat, {video: {url: dl_url}, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `∘ 𝚃𝙸𝚃𝚄𝙻𝙾: ${ttl}\n∘ 𝙿𝙴𝚂𝙾 𝙳𝙴𝙻 𝚅𝙸𝙳𝙴𝙾: ${size}`, thumbnail: await fetch(yt.thumbnail)}, {quoted: m});
+m.react(done)        
       } catch {
         try {
           const mediaa = await ytMp4(yt_play[0].url);
-          await conn.sendMessage(m.chat, {video: {url: mediaa.result}, fileName: `error.mp4`, caption: `_𝐓𝐡𝐞 𝐌𝐲𝐬𝐭𝐢𝐜 - 𝐁𝐨𝐭_`, thumbnail: mediaa.thumb, mimetype: 'video/mp4'}, {quoted: m});
+          await conn.sendMessage(m.chat, {video: {url: mediaa.result}, fileName: `error.mp4`, caption: `_CuriosityBot-MD_`, thumbnail: mediaa.thumb, mimetype: 'video/mp4'}, {quoted: m});
+   m.react(done)       
         } catch {
           try {
             const lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${lolkeysapi}&url=${yt_play[0].url}`);
@@ -149,15 +167,16 @@ var pesan = await conn.sendMessage(m.chat, {
             const n2 = lolh.result.link;
             const n3 = lolh.result.size;
             const n4 = lolh.result.thumbnail;
-            await conn.sendMessage(m.chat, {video: {url: n2}, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `▢ 𝚃𝙸𝚃𝚄𝙻𝙾: ${n}\n▢ 𝙿𝙴𝚂𝙾 𝙳𝙴𝙻 𝚅𝙸𝙳𝙴𝙾: ${n3}`, thumbnail: await fetch(n4)}, {quoted: m});
+            await conn.sendMessage(m.chat, {video: {url: n2}, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `∘ 𝚃𝙸𝚃𝚄𝙻𝙾: ${n}\n∘ 𝙿𝙴𝚂𝙾 𝙳𝙴𝙻 𝚅𝙸𝙳𝙴𝙾: ${n3}`, thumbnail: await fetch(n4)}, {quoted: m});
+     m.react(done)       
           } catch {
-            await conn.reply(m.chat, '*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝚅𝙸𝙳𝙴𝙾*', m);
+            await conn.reply(m.chat, '*⚠️ NO FUE POSIBLE DESCARGAR EL VIDEO. CORROBORÉ QUE EL NOMBRE DEL VIDEO SEA CORRECTO*', m);
           }
         }
       }
     }
   } catch {
-    throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*';
+    throw '*⚠️ NO FUE POSIBLE DESCARGAR EL AUDIO. CORROBORÉ QUE EL NOMBRE DEL VIDEO SEA CORRECTO*';
   }
 };
 handler.command = handler.help = ['play','song','youtube','ytmp3','ds','downloadyt','yta'];

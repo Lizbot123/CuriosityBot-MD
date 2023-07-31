@@ -1,4 +1,4 @@
-import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
+/*import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
 let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
 if (!text) throw `*⚠️ INGRESE EL NOMBRE DE LA CANCIÓN QUE ESTÁ BUSCANDO*\n\n*💡 EJEMPLO*\n*${usedPrefix + command}* Another love`
 m.react(rwait)
@@ -85,4 +85,4 @@ return await res.text()
 }
 async function delay(ms) {
 await new Promise(resolve => setTimeout(resolve, ms))
-}
+}*/

@@ -27,7 +27,7 @@
 "url": "https://github.com/Undefined17/CuriosityBot-MD/issues" },
 "license": "GPL-3.0-or-later",
 "dependencies": {
-"@whiskeysockets/baileys": "github:WhiskeySockets/Baileys#master",
+"@whiskeysockets/baileys": "npm:@queenanya/baileys2@6.4.1",
 "@adiwajshing/keyed-db": "^0.2.4",
 "@bochilteam/scraper": "4.0.22-alpha.0",
 "@brandond/findthelyrics": "^2.0.5",

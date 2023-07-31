@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+/*import fetch from 'node-fetch';
 import yts from 'yt-search';
 import ytdl from 'ytdl-core';
 import axios from 'axios';
@@ -314,10 +314,10 @@ const getBuffer = async (url, options) => {
   } catch (e) {
     console.log(`Error : ${e}`);
   }
-};
+};*/
 
 
-/*import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
+import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
    let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
   if (!text) throw `*⚠️ INGRESE EL NOMBRE DE LA CANCIÓN QUE ESTÁ BUSCANDO*\n\n*💡 EJEMPLO*\n*${usedPrefix + command}* Another love`
   m.react(rwait)
@@ -404,4 +404,4 @@ async function cut(url) {
 }
 async function delay(ms) {
    await new Promise(resolve => setTimeout(resolve, ms));
-}*/
+}

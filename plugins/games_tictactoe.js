@@ -1,4 +1,4 @@
-import { format } from 'util'
+/*import { format } from 'util'
 let debugMode = !1
 let winScore = 4999
 let playScore = 99
@@ -88,3 +88,4 @@ delete this.game[room.id]
 }}
 return !0
 }
+*/

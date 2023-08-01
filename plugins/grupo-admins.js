@@ -5,7 +5,7 @@ const listaAdmins = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
 if (!text) return m.reply(`*⚠️ POR FAVOR COLOQUE SU MOTIVO PARA INVOCAR A LOS ADMINS*`)
 let mensaje = args.join` `
-let yo = `*💬 MENSAJE:* ${mensaje}`
+let yo = `*💬 MENSAJE:* ${text}`
 let text = `*• INVOCANDO ADMINS •*
 
 ${yo}

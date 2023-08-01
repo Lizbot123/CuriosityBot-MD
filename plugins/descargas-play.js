@@ -10,10 +10,10 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
 const yt_play = await search(args.join(" "))
 let additionalText = ''
 if (command === 'play') {
-additionalText = 'audio 🔊'
+additionalText = 'AUDIO 🎧'
 } else if (command === 'play2') {
-additionalText = 'video 🎥'}
-let texto1 = `*∘ 📑 TÍTULO
+additionalText = 'VIDEO 🎥'}
+let texto1 = `*∘ 📑 TÍTULO*
 ${yt_play[0].title}
 
 *∘ 📆 PUBLICADO:*
@@ -40,7 +40,7 @@ ${yt_play[0].type}
 *∘ 📎 LINK*
 ${yt_play[0].url}
 
-⌚ ENVIANDO ${additionalText}, POR FAVOR ESPERE.*`.trim()
+*⌚ ENVIANDO ${additionalText}, POR FAVOR ESPERE.*`.trim()
 conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m })
 if (command == 'play') {
 try {

@@ -23,7 +23,7 @@ let n2 = lolh.result.link
 let n3 = lolh.result.size
 let n4 = lolh.result.thumbnail
 m.react(done)
-await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `*📑 TÍTULO*\n${n}\n\n*📊 PESO*\n${n3}`, thumbnail: await fetch(n4) }, { quoted: m })
+await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `*📑 TÍTULO*\n${n}\n\n*📍 PESO*\n${n3}`, thumbnail: await fetch(n4) }, { quoted: m })
 } catch {
 await conn.reply(m.chat, `*⚠️ ES POSIBLE QUE EL VIDEO SEA MUY PESADO. INTENTE CON OTRA OPCIÓN DE DESCARGA*`, fkontak, m)
 m.react(error)}

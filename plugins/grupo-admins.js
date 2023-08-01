@@ -6,13 +6,14 @@ const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadm
 if (!text) return m.reply(`*⚠️ POR FAVOR COLOQUE SU MOTIVO PARA INVOCAR A LOS ADMINS*`)
 if (text.length < 10) return m.reply(`*⚠️ EL MOTIVO ES MUY CORTO, MINIMO 10 CARÁCTERES*`)
 let mensaje = args.join` `
-let yo = `*💬 MENSAJE:* ${text}`
-let texto = `*• INVOCANDO ADMINS •*
+let yo = `*✉️ MENSAJE:* ${text}`
+let texto = `*⬡ SOLICITANDO LA PRESENCIA DE LOS ADMINS*
+*⬡ ${yo}
 
-${yo}
+*📍 LISTA DE ADMINS:*
+${listaAdmins}
 
-*📑 LISTA DE ADMINS:*
-• ${listaAdmins}`.trim()
+*🔰 ADMINISTRADORES 🔰*`.trim()
 conn.sendFile(m.chat, pp, 'error.jpg', texto, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
 handler.help = ['admins <texto>']

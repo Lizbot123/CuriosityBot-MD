@@ -29,10 +29,10 @@ export async function before(m) {
             }))
         if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
             m.reply({
-                '-3': 'El juego ha terminado',
-                '-2': 'Inválido',
-                '-1': 'Posición inválida',
-                0: 'Posición inválida',
+                '-3': '*⚠️ EL JUEGO A TERMINADO*',
+                '-2': '*⚠️ INVALIDO*',
+                '-1': '*⚠️ POSICIÓN INVALIDA*',
+                0: '*⚠️ POSICIÓN INVALIDA*',
             }[ok])
             return !0
         }
@@ -60,22 +60,18 @@ export async function before(m) {
             isWin = true
         }
         let winner = isSurrender ? room.game.currentTurn : room.game.winner
-        let str = `〬${isWin ? `╭─╮─᤻─᳒─᤻᳒「░⃟⃜🥳ꪳ۫₎۬ @${winner.split('@')[0]} ░⃟⃜🥳」\n├❥ᰰຼ Eres el ganador 🎉 *+${winScore} XP*\n*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*` : isTie ? `Se acabó el juego, con un empate *+${playScore} XP*` : `╭─╮─᤻─᳒─᤻᳒「░⃟⃜🍭ꪳ۫₎۬〬${wm} ░⃟⃜🐾⁩」
-├❥ᰰຼ Ahora es tu turno ${['❎', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})
-╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫☪︎︎︎̸⃘̸࣭ٜ࣪࣪࣪۬◌⃘۪֟፝֯۫۫︎⃪𐇽۫۬🍧⃘⃪۪֟፝֯۫۫۫۬◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸┄̸࣭࣭࣭࣭࣭ٜ۫╯`} 
+        let str = `〬${isWin ? `@${winner.split('@')[0]}\nEres el ganador 🎉 *+${winScore} XP*` : isTie ? `Se acabó el juego, con un empate *+${playScore} XP*
+Ahora es tu turno ${['❎', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`} 
 
-*╭─╮─᤻─᳒─᤻᳒᯽⃟ᰳᰬᰶ┈*⃐🙀*️⃟ᬽ፝֟━*
-├❥ᰰຼ ${arr.slice(0, 3).join('')}
-├❥ᰰຼ ${arr.slice(3, 6).join('')}
-├❥ᰰຼ ${arr.slice(6).join('')}
-*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*
+${arr.slice(0, 3).join('')}
+${arr.slice(3, 6).join('')}
+${arr.slice(6).join('')}
 
-*╭─╮─᤻─᳒─᤻᳒᯽⃟ᰳᰬᰶ┈*⃐JUGADORES*️⃟ᬽ፝֟━*
-├❥ *JUGADOR 1* ❎ : @${room.game.playerX.split('@')[0]} 
-├❥ *JUGADOR 2* ⭕ : @${room.game.playerO.split('@')[0]}
-*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*
+👤 JUGADORES
+*JUGADOR 1* ❎ : @${room.game.playerX.split('@')[0]} 
+*JUGADOR 2* ⭕ : @${room.game.playerO.split('@')[0]}
 
-❥ Escriba *surrender* para darse por vencido 
+Escriba *surrender* para darse por vencido 
 `.trim()
         let users = global.global.db.data.users
         if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)

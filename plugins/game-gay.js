@@ -1,6 +1,6 @@
 let handler = async (m, {conn}) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let gay = ${pickRandom(['LGTB+ 🏳️‍🌈', 'LGTB+ 🌈', 'LGTB+ 🪁'])}
+let gay = `${pickRandom(['LGTB+ 🏳️‍🌈', 'LGTB+ 🌈', 'LGTB+ 🪁'])}`
 conn.sendFile(
 m.chat,
 global.API("https://some-random-api.com", "/canvas/gay", {

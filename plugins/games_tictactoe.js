@@ -60,7 +60,7 @@ export async function before(m) {
             isWin = true
         }
         let winner = isSurrender ? room.game.currentTurn : room.game.winner
-        let str = `${isWin ? `@${winner.split('@')[0]}\nEres el ganador 🎉 *+${winScore} XP*` : isTie ? `Se acabó el juego, con un empate *+${playScore} XP*
+        let str = `${isWin ? `@${winner.split('@')[0]}\nEres el ganador 🎉 *+${winScore} XP*` : isTie ? `Se acabó el juego, con un empate *+${playScore} XP* : `
 Ahora es tu turno ${['❎', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})}`
 
 ${arr.slice(0, 3).join('')}

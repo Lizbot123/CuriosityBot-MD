@@ -1,14 +1,13 @@
 let handler = async (m, {conn}) => {
-let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-//let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let name = conn.getName(who)
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+let gay = ${pickRandom(['LGTB+ 🏳️‍🌈', 'LGTB+ 🌈', 'LGTB+ 🪁'])}
 conn.sendFile(
 m.chat,
 global.API("https://some-random-api.com", "/canvas/gay", {
 avatar: await conn.profilePictureUrl(who, "image").catch((_) => "https://telegra.ph/file/24fa902ead26340f3df2c.png"),
 }),
 "error.png",
-"🌈 *LGBT+ 🏳️‍🌈*",
+"*${gay}*",
 m
 )
 }

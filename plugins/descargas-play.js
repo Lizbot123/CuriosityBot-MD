@@ -13,26 +13,34 @@ if (command === 'play') {
 additionalText = 'audio 🔊'
 } else if (command === 'play2') {
 additionalText = 'video 🎥'}
-let texto1 = `*╔═══════❰  *🔰*  ❱══════⬣*
-║ *TITULO*:
-║ ${yt_play[0].title} 
-║ *PUBLICADO*:
-║ ${yt_play[0].ago} 
-║ *DURACION*:
-║ ${secondString(yt_play[0].duration.seconds)} 
-║ *VISTAS*: 
-║ ${`${MilesNumber(yt_play[0].views)}`} 
-║ *AUTOR*:
-║ ${yt_play[0].author.name} 
-║ *CANAL*: 
-║ ${yt_play[0].author.url} 
-║ *ID*:
-║ ${yt_play[0].videoId} 
-║ *Tipo:* 
-║ ${yt_play[0].type} 
-║ *Link:* ${yt_play[0].url}\n
-║ *_ENVIANDO ${additionalText}, PORFAVOR ESPERE.*
-*╚═══════❰ *${vs}* ❱══════⬣*`.trim()
+let texto1 = `*∘ 📑 TÍTULO
+${yt_play[0].title}
+
+*∘ 📆 PUBLICADO:*
+${yt_play[0].ago}
+
+*∘ ⏰ DURACIÓN:* 
+${secondString(yt_play[0].duration.seconds)}
+
+ *∘ 👀 VISTAS*
+${`${MilesNumber(yt_play[0].views)}`}
+
+*∘ 👤 AUTOR*
+${yt_play[0].author.name}
+
+*∘ 📍 CANAL*
+${yt_play[0].author.url}
+
+*∘ 🗳️ ID*
+${yt_play[0].videoId}
+
+*∘ 🗂️ TIPO* 
+${yt_play[0].type}
+
+*∘ 📎 LINK*
+${yt_play[0].url}
+
+⌚ ENVIANDO ${additionalText}, POR FAVOR ESPERE.*`.trim()
 conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m })
 if (command == 'play') {
 try {

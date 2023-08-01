@@ -1,4 +1,4 @@
-/*import { format } from 'util'
+import { format } from 'util'
 let debugMode = !1
 let winScore = 4999
 let playScore = 99
@@ -55,7 +55,7 @@ room.game._currentTurn = m.sender === room.game.playerX
 isWin = true
 }
 let winner = isSurrender ? room.game.currentTurn : room.game.winner
-let str = `${isWin ? `@${winner.split('@')[0]}\nEres el ganador 🎉 *+${winScore} XP*` : isTie ? `Se acabó el juego, con un empate *+${playScore} XP*` : `Ahora es tu turno ${['❎', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
+let str = `${isWin ? `@${winner.split('@')[0]}\nEres el ganador 🎉 *+${winScore} XP*` : isTie ? `Se acabó el juego, con un empate *+${playScore} XP*` `Ahora es tu turno ${['❎', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
 
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
@@ -88,4 +88,3 @@ delete this.game[room.id]
 }}
 return !0
 }
-*/

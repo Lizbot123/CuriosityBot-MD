@@ -7,13 +7,11 @@ if (!text) return m.reply(`*⚠️ POR FAVOR COLOQUE SU MOTIVO PARA INVOCAR A LO
 if (text.length < 10) return m.reply(`*⚠️ EL MOTIVO ES MUY CORTO, MINIMO 10 CARÁCTERES*`)
 let mensaje = args.join` `
 let yo = `*✉️ MENSAJE:* ${text}`
-let texto = `*⬡ INVOCANDO ADMINS*
+let texto = `*⬡ 🔰 INVOCANDO ADMINS*
 *⬡* ${yo}
 
-*📍 LISTA DE ADMINS:*
-${listaAdmins}
-
-*🔰 ADMINISTRADORES 🔰*`.trim()
+*⚠️ ADMINISTRADORES ⚠️:*
+${listaAdmins}*`.trim()
 conn.sendFile(m.chat, pp, 'error.jpg', texto, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
 handler.help = ['admins <texto>']

@@ -5,11 +5,11 @@ const listaAdmins = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
 let mensaje = args.join` `
 let yo = `*💬 MENSAJE:* ${mensaje}`
-let text = `*「 INVOCANDO ADMINS」*
+let text = `*📍 ADMINISTRADORES 📍*
 
 ${yo}
 
-*LISTA DE ADMINS:*
+*📑 LISTA DE ADMINS:*
 ${listaAdmins}`.trim()
 conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }

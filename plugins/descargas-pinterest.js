@@ -1,5 +1,5 @@
 import { pinterest } from '@bochilteam/scraper'
-const handler = async(m, { conn, text, usedPrefix, command }) => {
+var handler = async(m, { conn, text, usedPrefix, command }) => {
 if (!text) throw `*⚠️ INGRESE UN TEXTO*\n\n❕ EJEMPLO\n*${usedPrefix + command} Minecraft*`
 m.react(rwait)
 const json = await pinterest(text)

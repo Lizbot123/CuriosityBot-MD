@@ -1,3 +1,25 @@
+resolve({ title, result: tinyUrl, rersult2: resultFix[0].video, thumb })}).catch(reject)})};
+
+async function ytPlay(query) {
+return new Promise((resolve, reject) => {
+yts(query).then(async(getData) => {
+let result = getData.videos.slice( 0, 5 );
+let url = [];
+for (let i = 0; i < result.length; i++) { url.push(result[i].url) }
+let random = url[0];
+let getAudio = await ytMp3(random);
+resolve(getAudio)}).catch(reject)})};
+
+async function ytPlayVid(query) {
+return new Promise((resolve, reject) => {
+yts(query).then(async(getData) => {
+let result = getData.videos.slice( 0, 5 );
+let url = [];
+for (let i = 0; i < result.length; i++) { url.push(result[i].url) }
+let random = url[0];
+let getVideo = await ytMp4(random);
+resolve(getVideo)}).catch(reject)})};
+
 /*import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
 let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
 if (!text) throw `*⚠️ INGRESE EL NOMBRE DE LA CANCIÓN QUE ESTÁ BUSCANDO*\n\n*💡 EJEMPLO*\n*${usedPrefix + command}* Another love`

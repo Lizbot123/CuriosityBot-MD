@@ -1,24 +1,24 @@
-// import * as baileys from '@whiskeysockets/baileys'
 let baileys = (await import(global.baileys)).default
-
 
 let handler = async (m, { conn, text }) => {
 	let [, code] = text.match(/chat\.whatsapp\.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i) || []
-	if (!code) throw '*⚠️ INGRESE EL LINK DE UN GRUPO*'
+	if (!code) throw `*⚠️ INGRESE EL LINK DE UN GRUPO DE WHATSAPP*`
 	let res = await conn.query({ tag: 'iq', attrs: { type: 'get', xmlns: 'w:g2', to: '@g.us' }, content: [{ tag: 'invite', attrs: { code } }] }),
 		data = extractGroupMetadata(res),
 		txt = Object.keys(data).map(v => `*${v.capitalize()}:* ${data[v]}`).join('\n'),
 		pp = await conn.profilePictureUrl(data.id, 'image').catch(console.error)
 	if (pp) return conn.sendMessage(m.chat, { image: { url: pp }, caption: txt }, { quoted: m })
-	let groupinfo = `🗂️ *ID:* ${data.id}\n💌 *Nombre:* ${data.subject}\n📍 *Creado:* ${data.creation}\n🎨 *Dueño:* ${data.owner}`
-	let descripcion = `${data.desc}`
-	await conn.reply(m.chat, groupinfo, fliveLoc, m)
-         conn.reply.(m.chat, descripcion, m)
-	//m.reply(txt)
+	let groupinfo = `🗂️ *ID:* ${data.id}*
+💌 *Nombre:* ${data.subject}*
+🗓️ *Creado:* ${data.creation}*
+🎨 *Dueño:* ${data.owner}*
+*_La descripción se enviarán a continuación 👇👇👇_*`
+	await conn.reply(m.chat, groupinfo, m)
+	await conn.reply(m.chat, `${data.desc}`, m)
 }
-handler.tags = ['tools']
 handler.command = /^(inspect)$/i
-
+handler.register = true
+handler.level = 3
 export default handler
 
 const extractGroupMetadata = (result) => {
@@ -37,4 +37,3 @@ const extractGroupMetadata = (result) => {
 	}
 	return metadata
 }
-

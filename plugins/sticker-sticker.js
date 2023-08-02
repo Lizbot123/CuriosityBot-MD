@@ -12,13 +12,13 @@ let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/webp|image|video/g.test(mime)) {
 if (/video/g.test(mime)) if ((q.msg || q).seconds > 8) return m.reply('*⚠️ EL VÍDEO NO PUEDE DURAR MAS DE 7 SEGUNDOS*')
 let img = await q.download?.()
-
+stiker = await sticker(img, false, global.packname, global.author)
 if (!img) throw `*⚠️ RESPONDE A UNA IMAGEN O VIDEO CON ${usedPrefix + command}*`
 
 let out
 await conn.reply(m.chat, `_Calma crack estoy haciendo tu sticker 👏_\n\n_*Recuerda los stickersgif son de 6 segundos*_\n\n_*by CuriosityBot*_`, m)
 try {
-stiker = await sticker(img, false, global.packname, global.author)
+
 } catch (e) {
 console.error(e)
 } finally {

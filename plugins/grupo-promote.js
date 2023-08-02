@@ -21,10 +21,10 @@ var user = number + '@s.whatsapp.net'
 } catch (e) {
 } finally {
 conn.groupParticipantsUpdate(m.chat, [user], 'promote')
-conn.reply(m.chat, `*⚠️ AHORA TIENE PODER EN EL GRUPO*`, fdocs, m)
+conn.reply(m.chat, `*AHORA TIENE PODER EN EL GRUPO*`, fdocs, m)
 	
 }}
-handler.help = ['*52xxx*','*@usuario*','*responder chat*'].map(v => 'promote ' + v)
+handler.help = ['*521xxx*','*@usuario*','*responder chat*'].map(v => 'promote ' + v)
 handler.tags = ['group']
 handler.command = /^(promote|daradmin|darpoder)$/i
 handler.group = true

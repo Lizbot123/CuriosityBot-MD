@@ -19,10 +19,9 @@ var user = m.quoted.sender
 var user = number + '@s.whatsapp.net'
 }
 } catch (e) {
-} finally {
 conn.groupParticipantsUpdate(m.chat, [user], 'demote')
 conn.reply(m.chat, `*AHORA NO TIENE PODER EN EL GRUPO*`, m)
-}}
+}
 handler.help = ['*521xxx*','*@usuario*','*responder chat*'].map(v => 'demote ' + v)
 handler.tags = ['group']
 handler.command = /^(demote|quitarpoder|quitaradmin)$/i

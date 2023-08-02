@@ -67,7 +67,7 @@ handler.all = async function (m) {
                    "groupJid": "6285736178354-1625305606@g.us",
                    "inviteCode": "null",
                    "groupName": "Curiosity", 
-                   "caption": wm, 
+                   "caption": wm2, 
                    'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')
                }
            }

@@ -85,7 +85,7 @@ if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, glob
 else return m.reply(`_Calma crack estoy haciendo tu sticker 👏_\n\n_*Recuerda los stickersgif son de 6 segundos*_\n\n_*by CuriosityBot*_`)}
 
 if (stiker) {
-await conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
+await conn.sendFile(m.chat, stiker, 'wm.webp', '', m, false, { asSticker: true })
 } else {
 await m.reply()
 console.log(`ERROR`)

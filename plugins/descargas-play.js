@@ -41,20 +41,17 @@ ${yt_play[0].type}
 ${yt_play[0].url}
 
 *⌚ ENVIANDO ${additionalText}, POR FAVOR ESPERE.*`.trim()
-conn.sendMessage(m.chat, {
-                extendedTextMessage:{
-                text: texto1, 
-                contextInfo: {
-                     externalAdReply: {
-                        title: "Powered by",
-                        mediaType: 1,
-                        previewType: 0,
-                        renderLargerThumbnail: true,
-                        thumbnailUrl: yt_play[0].thumbnail,
-                        sourceUrl: mcs
-                    }
-                }, mentions: [m.sender]
-}}, {})
+await conn.sendMessage(m.chat, {
+text: texto1,
+contextInfo: {
+externalAdReply: {
+title: yt_play[0].title,
+body: packname,
+image: { url: yt_play[0].thumbnail }, 
+mediaType: 1,
+showAdAttribution: true,
+renderLargerThumbnail: true
+}}} , { quoted: m.sender })
 //conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m })
 if (command == 'play') {
 try {

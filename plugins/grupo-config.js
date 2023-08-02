@@ -14,14 +14,7 @@ throw `*¡⚠️ FORMATO ERRÓNEO ⚠️!*\n\n💡 EJEMPLO:
 (Permite que todos hablen) 
 
 *○ 🔒 ${usedPrefix + command} cerrar*
-(Permite que solo los admins hablen)
-
-*○ 🔓  ${usedPrefix + command} todos*
-(Permite que todos pueden editar el grupo)
-
-*○ 🔓 ${usedPrefix + command} admins*
-(Permite que solo los admins puedan editar el grupo)
-`.trim()
+(Permite que solo los admins hablen)`.trim()
 }
 await conn.groupSettingUpdate(m.chat, isClose)
 {m.reply('*✅ CONFIGURADO CORRECTAMENTE*')}

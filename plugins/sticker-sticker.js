@@ -71,18 +71,18 @@ if (/video/g.test(mime)) if ((q.msg || q).seconds > 10) return m.reply('*⚠️ 
 if (/webp|image|video/g.test(mime)) {
 let img = await q.download?.()
 let out
-stiker = await addExif(img, false, global.packname, global.author)
+stiker = await addExif(img, global.packname, global.author)
   
 if (!stiker) {
 //if (/webp/g.test(mime)) out = await webp2png(img)
 //else if (/image/g.test(mime)) out = await uploadImage(img)
 //else if (/video/g.test(mime)) out = await uploadFile(img)
 //if (typeof out !== 'string') out = await uploadImage(img)
-stiker = await addExif(img, packname || '', author || '')
+stiker = await addExif(img, global.packname, global.author)
   
 if (!stiker) errorMessage = `ERROR`
 }} else if (args[0]) {
-if (isUrl(args[0])) stiker = await addExif(img, packname || '', author || '')
+if (isUrl(args[0])) stiker = await addExif(img, global.packname, global.author)
 else return m.reply(`_Calma crack estoy haciendo tu sticker 👏_\n\n_*Recuerda los stickersgif son de 6 segundos*_\n\n_*by CuriosityBot*_`)}
 
 if (stiker) {

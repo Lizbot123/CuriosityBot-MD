@@ -1,4 +1,4 @@
-/* import * as baileys from '@whiskeysockets/baileys'
+ import * as baileys from '@whiskeysockets/baileys'
 
 let handler = async (m, { conn, text }) => {
 	let [, code] = text.match(/chat\.whatsapp\.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i) || []
@@ -11,7 +11,7 @@ let handler = async (m, { conn, text }) => {
 	let groupinfo = `🗂️ *ID:* ${data.id}\n💌 *Nombre:* ${data.subject}\n📍 *Creado:* ${data.creation}\n🎨 *Dueño:* ${data.owner}`
 	let descripcion = `${data.desc}`
 	await conn.reply(m.chat, groupinfo, fliveLoc, m)
-         conn.reply.(m.chat, descripcion, fgif, m)
+         //conn.reply.(m.chat, descripcion, m)
 	//m.reply(txt)
 }
 handler.tags = ['tools']
@@ -35,4 +35,4 @@ const extractGroupMetadata = (result) => {
 	}
 	return metadata
 }
-*/
+

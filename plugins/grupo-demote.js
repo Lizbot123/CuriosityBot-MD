@@ -17,13 +17,13 @@ var user = number + '@s.whatsapp.net'
 var user = m.quoted.sender
 } else if(m.mentionedJid) {
 var user = number + '@s.whatsapp.net'
-} 
+}
 } catch (e) {
 } finally {
 conn.groupParticipantsUpdate(m.chat, [user], 'demote')
-conn.reply(m.chat, `*⚠️ AHORA NO TIENE PODER EN EL GRUPO*`, m)
+conn.reply(m.chat, `*⚠️ AHORA NO TIENE PODER EN EL GRUPO*`, ftoko, m)
 }}
-handler.help = ['*52xxx*','*@usuario*','*responder chat*'].map(v => 'demote ' + v) 
+handler.help = ['*52xxx*','*@usuario*','*responder chat*'].map(v => 'demote ' + v)
 handler.tags = ['group']
 handler.command = /^(demote|quitarpoder|quitaradmin)$/i
 handler.group = true

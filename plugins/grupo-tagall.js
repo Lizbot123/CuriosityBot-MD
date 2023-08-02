@@ -12,8 +12,8 @@ let username = conn.getName(who)
 for (let username of participants) {
 teks += `*│◦❒* @${username.id.split('@')[0]}\n`}
 teks += `*╰────────────────────╯*`
-conn.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, )  
-  
+conn.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, )
+
 }
 handler.help = ['tagall <mesaje>','invocar <mesaje>']
 handler.tags = ['group']

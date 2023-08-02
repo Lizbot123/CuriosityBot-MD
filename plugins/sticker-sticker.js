@@ -3,52 +3,39 @@ import uploadFile from '../lib/uploadFile.js'
 import uploadImage from '../lib/uploadImage.js'
 import { webp2png } from '../lib/webp2mp4.js'
 
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-
+let handler = async (m, { conn, args, usedPrefix, command, text }) => {
 let stiker = false
-try {
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ''
+
+if (!/webp|image|video/g.test(mime) && !text) return m.reply(`*⚠️ RESPONDE A UNA IMAGEN O VIDEO CON ${usedPrefix + command}*`)
+if (/video/g.test(mime)) if ((q.msg || q).seconds > 10) return m.reply('*⚠️ EL VÍDEO NO PUEDE DURAR MAS DE 7 SEGUNDOS*')
+
 if (/webp|image|video/g.test(mime)) {
-if (/video/g.test(mime)) if ((q.msg || q).seconds > 8) return m.reply('*⚠️ EL VÍDEO NO PUEDE DURAR MAS DE 7 SEGUNDOS*')
 let img = await q.download?.()
-stiker = await sticker(img, false, global.packname, global.author)
-if (!img) throw `*⚠️ RESPONDE A UNA IMAGEN O VIDEO CON ${usedPrefix + command}*`
-
 let out
+stiker = await sticker(img, false, global.packname, global.author)
 await conn.reply(m.chat, `_Calma crack estoy haciendo tu sticker 👏_\n\n_*Recuerda los stickersgif son de 6 segundos*_\n\n_*by CuriosityBot*_`, m)
-try {
-
-} catch (e) {
-console.error(e)
-} finally {
+  
 if (!stiker) {
 if (/webp/g.test(mime)) out = await webp2png(img)
 else if (/image/g.test(mime)) out = await uploadImage(img)
 else if (/video/g.test(mime)) out = await uploadFile(img)
 if (typeof out !== 'string') out = await uploadImage(img)
 stiker = await sticker(false, out, global.packname, global.author)
-}}
-} else if (args[0]) {
-if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
-
-else return m.reply('*⚠️ EL ENLACE / URL / LINK NO ES VÁLIDO*')
   
-}
-} catch (e) {
-console.error(e)
-if (!stiker) stiker = e
-} finally {
-if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', null, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: packname, body: '• STICKER •', mediaType: 2, sourceUrl: 'Hola', thumbnail: null}}})
+if (!stiker) errorMessage = 'ERROR'
+}} else if (args[0]) {
+if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
+else return m.reply('*⚠️ EL ENLACE / URL / LINK NO ES VÁLIDO*')}
 
-else throw '*⚠️ RESPONDE A UNA IMAGEN O UN VIDEO PARA CONVERTIRLO EN STICKER*'
-
+if (stiker) {
+conn.sendFile(m.chat, stiker, 'sticker.webp', '', null, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: packname, body: '• STICKER •', mediaType: 2, sourceUrl: md, thumbnail: null}}})
+} else {
+console.log(stiker)
 }}
-handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']
-handler.tags = ['sticker']
-handler.command = /^s(tic?ker)?(gif)?(wm)?$/i
-handler.exp = 200
 
+handler.command = /^(s(tickers?)?(image|video|gif|img)?)$/i
 export default handler
 
 const isUrl = (text) => {

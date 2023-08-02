@@ -5,16 +5,13 @@ const groupAdmins = participants.filter(p => p.admin)
 const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
 let text = 
-`*「 INFORMACIÓN DEL GRUPO 」*
+`*📍 INFORMACIÓN DEL GRUPO 📍*
 
 📡 *ID*
 ${groupMetadata.id}
 
 📑 *NOMBRE DEL GRUPO*
 ${groupMetadata.subject}
-
-💬 *DESCRIPCIÓN*
-${groupMetadata.desc?.toString() || '⚠️ No hay descripción!!'}
 
 👥 *TOTAL DE PARTICIPANTES*
 ${participants.length} Participantes
@@ -30,8 +27,11 @@ WELCOME: ${welcome ? '✅' : '❌'}
 DETECT ${detect ? '✅' : '❌'} 
 ANTILINK ${antiLink ? '✅' : '❌'} 
 ANTILINK 2 ${antiLink2 ? '✅' : '❌'}  
+
+💬 *DESCRIPCIÓN*
+${groupMetadata.desc?.toString() || '⚠️ No hay descripción!!'}
 `.trim()
-conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
+conn.sendFile(m.chat, pp, 'error.jpg', text, fdocs, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
 handler.help = ['infogrup']
 handler.tags = ['group']

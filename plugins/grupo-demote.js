@@ -21,7 +21,7 @@ var user = number + '@s.whatsapp.net'
 } catch (e) {
 } finally {
 conn.groupParticipantsUpdate(m.chat, [user], 'demote')
-conn.reply(m.chat, `*⚠️ AHORA NO TIENE PODER EN EL GRUPO*`, ftoko, m)
+conn.reply(m.chat, `*⚠️ AHORA NO TIENE PODER EN EL GRUPO*`, fgif, m)
 }}
 handler.help = ['*52xxx*','*@usuario*','*responder chat*'].map(v => 'demote ' + v)
 handler.tags = ['group']

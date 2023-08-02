@@ -46,11 +46,11 @@ handler.all = async function (m) {
                        },
             message: { 
                         "videoMessage": { 
-                        "title": wm2,
+                        "title": wm,
                         "h": `Hmm`,
                         'seconds': '999999999', 
                         'gifPlayback': 'true', 
-                        'caption': wm2,
+                        'caption': wm,
                         'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')
                                }
                               }

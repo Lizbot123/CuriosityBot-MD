@@ -372,7 +372,7 @@ new Promise(resolve => {
 p.on('error', _ => resolve(false))
 })])}))
 let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test
-//let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find }
+let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find }
 Object.freeze(global.support)
 }
 

@@ -14,8 +14,8 @@ const __dirname = global.__dirname(import.meta.url)
 /*=========== OWNER ===========*/
 global.owner = [
  ['59894808483', 'Creador 🎨', true],
- ['50258115623', '❥︎𝑾𝑰𝒍𝒎𝒆𝒓 - 𝑪𝒐𝒍𝒂𝒃𝒐𝒓𝒂𝒅𝒐𝒓 😼'],
- ['240222036871', 'COLAB - Owner', true], 
+ ['240222036871', 'Colaborador 1', true],
+ ['50258115623', 'Colaborador 2😼'],
  ['5214531106422'], ['593968585383'], ['5492266613038'], ['5492266466080'], ['573106040746']]  
 
 global.animxscans = ['56962237366']
@@ -57,8 +57,8 @@ global.nnnnn = 'https://chat.whatsapp.com/KlRcEfl8snBEEOA0JXzw5A' //enlace curio
 global.nna2 = 'J1R402WH1N0Hdl3S0NDEYu' 
 
 /*=========== NOMBRES ===========*/
-global.wm = '᭥𐨏𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕-𝑴𝑫᭢ꪲ'
-global.wm2 = '© CuriosityBot-MD'
+global.wm = '© CuriosityBot-MD'
+global.wm2 = '᭥𐨏𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕-𝑴𝑫᭢ꪲ'
 global.wm3 = '⎙ 𝙲𝚞𝚛𝚒𝚘𝚜𝚒𝚝𝚢'
 global.wm4 = '🚀 𝘊𝘶𝘳𝘪𝘰𝘴𝘪𝘵𝘺𝘉𝘰𝘵-𝘔𝘋' 
 global.wm5 = '『 CuriosityBot-MD 』'

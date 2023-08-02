@@ -30,7 +30,7 @@ if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, glob
 else return m.reply('*⚠️ EL ENLACE / URL / LINK NO ES VÁLIDO*')}
 
 if (stiker) {
-conn.sendFile(m.chat, stiker, 'sticker.webp', '', null, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: packname, body: '• STICKER •', mediaType: 2, sourceUrl: md, thumbnail: null}}})
+conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
 } else {
 console.log(stiker)
 }}

@@ -31,7 +31,7 @@ ANTILINK 2 ${antiLink2 ? '✅' : '❌'}
 💬 *DESCRIPCIÓN*
 ${groupMetadata.desc?.toString() || '⚠️ No hay descripción!!'}
 `.trim()
-conn.sendFile(m.chat, pp, 'error.jpg', text, fdocs, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
+conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
 handler.help = ['infogrup']
 handler.tags = ['group']

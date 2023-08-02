@@ -3,7 +3,7 @@ let handler = async(m, { conn, args, text }) => {
 if (!text) throw '*⚠️ INGRESE EL ENLACE PARA ACORTAR*'
 let shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text()  
 if (!shortUrl1) throw `*⚠️ ERROR, INTENTE DE NUEVO*`
-let done = `*📑 SE ACORTÓ EL ENLACE CON ÉXITO!!*\n\n*📡 ENLACE ANTIGUO:*\n${text}\n\n*🚀 ENLACE NUEVO:*\n${shortUrl1}`.trim()   
+let done = `*✅ SE ACORTÓ EL ENLACE CON ÉXITO!!*\n\n*🔗 ENLACE ANTIGUO:*\n${text}\n\n*🚀 ENLACE NUEVO:*\n${shortUrl1}`.trim()   
 m.reply(done)}
 handler.help = ['tinyurl','acortar'].map(v => v + ' <link>')
 handler.tags = ['tools']

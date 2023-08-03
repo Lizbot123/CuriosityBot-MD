@@ -289,7 +289,7 @@ mediaUrl: yt,
 mediaType: 2,
 title: wm,
 body: library,
-thumbnail: await(await fetch(link)).buffer(),
+thumbnail: img1,
 sourceUrl: md
 }}
 })

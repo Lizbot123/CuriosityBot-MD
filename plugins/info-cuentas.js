@@ -11,7 +11,7 @@ let str = `
 ┣────────────────
 │ *YOUTUBE*
 │ ${yt}
-┗───────────────┛`
+┗───◆ CUENTAS ◆───┛`
 
 await conn.sendFile(m.chat, media, 'gata.mp4', str, fkontak)}
 

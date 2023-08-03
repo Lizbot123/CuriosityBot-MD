@@ -288,7 +288,7 @@ externalAdReply :{
 mediaUrl: yt, 
 mediaType: 2,
 title: wm,
-body: ,
+body: library,
 thumbnail: await(await fetch(link)).buffer(),
 sourceUrl: md
 }}

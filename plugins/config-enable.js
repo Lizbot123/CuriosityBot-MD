@@ -279,8 +279,7 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╭┄┄≪ *「 �
 `, fkontak, m)
 throw false
 }
-conn.reply(m.chat, `
-╔───𖥻 ON-OFF 𖥻───╗
+conn.reply(m.chat, `╔───𖥻 ON-OFF 𖥻───╗
 │ *OPCIÓN:* ${type} 
 │ *ESTADO*: ${isEnable ? 'Activado' : 'Desactivado'}
 │ *PARA*: ${isAll ? 'Este bot' : isUser ? '' : 'Este chat'}

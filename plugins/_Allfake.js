@@ -170,7 +170,7 @@ handler.all = async function (m) {
 						"requestFrom": "0@s.whatsapp.net",
 						"noteMessage": {
 							"extendedTextMessage": {
-								"text": "Hola Xd " + name
+								"text": "Hola Xd "
 							}
 						},
 						"expiryTimestamp": fsizedoc,

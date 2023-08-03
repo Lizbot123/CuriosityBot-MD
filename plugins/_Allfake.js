@@ -184,7 +184,17 @@ handler.all = async function (m) {
 			}
 
 	
-
+global.fakefb = {
+         contextInfo: { externalAdReply: { showAdAttribution: true,
+            mediaUrl: "https://Facebook.com/AzamiModz",
+            mediaType: "VIDEO",
+            description: "https://www.Facebook.com/AzamiMods", 
+            title: wm3,
+            body: wm,
+            thumbnailUrl: pp,
+            sourceUrl: yt
+    }
+    } }
 
 } 
 export default handler

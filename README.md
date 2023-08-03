@@ -96,7 +96,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 <!--[![Gata Dios](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li)
 [![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21)
 [![Endymion](https://github.com/ReyEndymion?size=100)](https://github.com/ReyEndymion)-->
-<a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png?size=100" width="100" height="100"><a | [![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) 
+<a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png?size=100" width="100" height="100"></a> | [![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) 
 </a> | [![Endymion](https://github.com/ReyEndymion.png?size=100)](https://github.com/ReyEndymion) 
 ---|---
 [Gata Dios](https://github.com/GataNina-Li) |[Mario](https://github.com/elrebelde21)

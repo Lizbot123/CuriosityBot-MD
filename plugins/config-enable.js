@@ -283,7 +283,16 @@ conn.reply(m.chat, `╔───𖥻 ON-OFF 𖥻───╗
 │ *OPCIÓN:* ${type} 
 │ *ESTADO*: ${isEnable ? 'Activado' : 'Desactivado'}
 │ *PARA*: ${isAll ? 'Este bot' : isUser ? '' : 'Este chat'}
-╚───𖥻 ON-OFF 𖥻───╝`, fakefb,  m)
+╚───𖥻 ON-OFF 𖥻───╝`, fliveLoc2, m, { contextInfo: {
+externalAdReply :{
+mediaUrl: yt, 
+mediaType: 2,
+title: wm,
+body: ,
+thumbnail: await(await fetch(link)).buffer(),
+sourceUrl: md
+}}
+})
 
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')

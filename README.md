@@ -94,11 +94,11 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 #### COLABORADORES 
 <a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png?size=100" width="100" height="100"></a> | [![reyEndymion](https://github.com/ReyEndymion.png?size=100)](https://github.com/ReyEndymion) 
-</a> | [![elrebelde21](
-https://github.com/elrebelde21.png?size=100)](https://github.com/ReyEndymion) 
+</a> | [![elrebelde21]
+(https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) 
 ---|---
 [Gata Dios](https://github.com/GataNina-Li)  | [reyEndymion](https://github.com/ReyEndymion) | [elrebelde21](https://github.com/elrebelde21)
-Colaboradora | Colaborador | 
+Colaboradora | Colaborador | Colaborador|
 
 ##### AGRADECIMIENTO ESPECIAL PARA
 <!--[![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo)

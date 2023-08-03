@@ -279,9 +279,12 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╭┄┄≪ *「 �
 `, fkontak, m)
 throw false
 }
-conn.reply(m.chat, `🗂️ *OPCIÓN:* ${type} 
-💻 *ESTADO*: ${isEnable ? 'Activado ✅' : 'Desactivado ❌'}
-📡 *PARA*: ${isAll ? 'Este bot 🤖' : isUser ? '' : 'Este chat 💬'}`, fliveLoc,  m)
+conn.reply(m.chat, `
+╔───𖥻ON-OFF𖥻───╗
+│ *OPCIÓN:* ${type} 
+│ *ESTADO*: ${isEnable ? 'Activado' : 'Desactivado'}
+│ *PARA*: ${isAll ? 'Este bot' : isUser ? '' : 'Este chat'}
+╚───𖥻ON-OFF𖥻───╝`, fliveLoc,  m)
 
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')

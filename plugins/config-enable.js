@@ -234,48 +234,49 @@ throw false
 global.opts['swonly'] = isEnable
 break
 default:
-if (!/[01]/.test(command)) return await conn.reply(m.chat, `╭┄┄≪ *「 𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕-𝑴𝑫 」* ≫┄┄╮
+if (!/[01]/.test(command)) return await conn.reply(m.chat, `╔───𖥻 LISTA 𖥻───╗
 │⚌⚌⚌⚌⚌⚌⚌⚌⚌
-│ *✨ 🅗🅞🅛🅐*
+│ ✨ 🅗🅞🅛🅐
 │⚌⚌⚌⚌⚌⚌⚌⚌⚌
-╰┄┄≪ *「 𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕-𝑴𝑫 」* ≫┄┄╯
-
-*LISTA DE OPCIONES* 📄
-
-➵ _${usedPrefix}enable *welcome*_
-➵ _${usedPrefix}disable *welcome*_
-➵ _${usedPrefix}enable *public*_
-➵ _${usedPrefix}disable *public*_
-➵ _${usedPrefix}enable *antilink*_
-➵ _${usedPrefix}disable *antilink*_
-➵ _${usedPrefix}enable *antilink2*_
-➵ _${usedPrefix}disable *antilink2*_
-➵ _${usedPrefix}enable *antifake*_
-➵ _${usedPrefix}disable *antifake*_
-➵ _${usedPrefix}enable *antitraba*_
-➵ _${usedPrefix}disable *antitraba*_
-➵ _${usedPrefix}enable *antitoxic*_
-➵ _${usedPrefix}disable *antitoxic*_
-➵ _${usedPrefix}enable *autolevelup*_
-➵ _${usedPrefix}disable *autolevelup*_
-➵ _${usedPrefix}enable *nsfw*_
-➵ _${usedPrefix}disable *nsfw*_
-➵ _${usedPrefix}enable *simi*_
-➵ _${usedPrefix}disable *simi*_
-➵ _${usedPrefix}enable *detect*_
-➵ _${usedPrefix}disable *detect*_
-➵ _${usedPrefix}enable *restrict*_
-➵ _${usedPrefix}disable *restrict*_
-➵ _${usedPrefix}enable *pconly*_
-➵ _${usedPrefix}disable *pconly*_
-➵ _${usedPrefix}enable *gconly*_
-➵ _${usedPrefix}disable *gconly*_
-➵ _${usedPrefix}enable *autoread*_
-➵ _${usedPrefix}disable *autoread*_
-➵ _${usedPrefix}enable *autoread*_
-➵ _${usedPrefix}disable *modoadmin*_
-➵ _${usedPrefix}enable *modoadmin*_
-➵ _${usedPrefix}disable *modejadibot*_
+│
+│
+│ *LISTA DE OPCIONES* 📄
+│
+│➵ _${usedPrefix}enable *welcome*_
+│➵ _${usedPrefix}disable *welcome*_
+│➵ _${usedPrefix}enable *public*_
+│➵ _${usedPrefix}disable *public*_
+│➵ _${usedPrefix}enable *antilink*_
+│➵ _${usedPrefix}disable *antilink*_
+│➵ _${usedPrefix}enable *antilink2*_
+│➵ _${usedPrefix}disable *antilink2*_
+│➵ _${usedPrefix}enable *antifake*_
+│➵ _${usedPrefix}disable *antifake*_
+│➵ _${usedPrefix}enable *antitraba*_
+│➵ _${usedPrefix}disable *antitraba*_
+│➵ _${usedPrefix}enable *antitoxic*_
+│➵ _${usedPrefix}disable *antitoxic*_
+│➵ _${usedPrefix}enable *autolevelup*_
+│➵ _${usedPrefix}disable *autolevelup*_
+│➵ _${usedPrefix}enable *nsfw*_
+│➵ _${usedPrefix}disable *nsfw*_
+│➵ _${usedPrefix}enable *simi*_
+│➵ _${usedPrefix}disable *simi*_
+│➵ _${usedPrefix}enable *detect*_
+│➵ _${usedPrefix}disable *detect*_
+│➵ _${usedPrefix}enable *restrict*_
+│➵ _${usedPrefix}disable *restrict*_
+│➵ _${usedPrefix}enable *pconly*_
+│➵ _${usedPrefix}disable *pconly*_
+│➵ _${usedPrefix}enable *gconly*_
+│➵ _${usedPrefix}disable *gconly*_
+│➵ _${usedPrefix}enable *autoread*_
+│➵ _${usedPrefix}disable *autoread*_
+│➵ _${usedPrefix}enable *autoread*_
+│➵ _${usedPrefix}disable *modoadmin*_
+│➵ _${usedPrefix}enable *modoadmin*_
+│➵ _${usedPrefix}disable *modejadibot*_
+╚───𖥻 LISTA 𖥻───╝
 `, fkontak, m)
 throw false
 }

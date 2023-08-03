@@ -93,15 +93,15 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 <a href="https://github.com/Undefined17"><img src="https://github.com/Undefined17.png" width="250" height="250" alt="Azami19"/></a>
 
 #### COLABORADORES 
-<!--[![Gata Dios](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li)
-[![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21)
-[![Endymion](https://github.com/ReyEndymion?size=100)](https://github.com/ReyEndymion)-->
-<a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png?size=100" width="100" height="100"></a> | [![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) 
-</a> | [![Endymion](https://github.com/ReyEndymion.png?size=100)](https://github.com/ReyEndymion) 
+<!--[![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21)
+[![Gata Dios](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li)
+[![ReyEndymion](https://github.com/ReyEndymion.png?size=100)](https://github.com/ReyEndymion)-->
+<a href="https://github.com/elrebelde21"><img src="https://github.com/elrebelde21.png?size=100" width="100" height="100"></a> | [![Gata Dios](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li)
+[ReyEndymion](https://github.com/ReyEndymion.png?size=100)](https://github.com/ReyEndymion) 
 ---|---
-[Gata Dios](https://github.com/GataNina-Li) |[Mario](https://github.com/elrebelde21)
-[Endymion](https://github.com/ReyEndymion)
-GataNina-Li | El rebelde | Endymion|
+[Mario](https://github.com/elrebelde21)  | [Gata Dios](https://github.com/GataNina-Li) | [ReyEndymion](https://github.com/ReyEndymion)
+El rebelde | Gata dios | ReyEndymion |
+
 
 ##### AGRADECIMIENTO ESPECIAL PARA
 <!--[![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo)

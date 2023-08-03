@@ -162,12 +162,12 @@ global.adReply = {
 				forwardingScore: 9999,
 				externalAdReply: { 
                                         showAdAttribution: true,
-					title: global.ucapan,
+					title: cb,
 					body: wm,
 					mediaUrl: yt,
 					description: wm3,
 					previewType: "PHOTO",
-					thumbnail: await (await fetch(pic)).buffer(),
+					thumbnail: await (await fetch(wm)).buffer(),
 					sourceUrl: "https://github.com/Undefined17"			
 				}
 			}

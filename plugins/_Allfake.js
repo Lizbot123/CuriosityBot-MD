@@ -157,23 +157,7 @@ handler.all = async function (m) {
            }
 
 	
-global.adReply = {
-			contextInfo: {
-				forwardingScore: 9999,
-				externalAdReply: { 
-                                        showAdAttribution: true,
-					title: cb,
-					body: wm,
-					mediaUrl: yt,
-					description: wm3,
-					previewType: "PHOTO",
-					thumbnail: await (await fetch(wm)).buffer(),
-					sourceUrl: "https://github.com/Undefined17"			
-				}
-			}
-		}
-	
-               
+
 
 } 
 export default handler

@@ -153,9 +153,25 @@ handler.all = async function (m) {
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "title": "Azami","h": wm, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}
+            message: { "liveLocationMessage": { "title": "Azami","h": wm, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}		
            }
 
+	
+global.adReply = {
+			contextInfo: {
+				forwardingScore: 9999,
+				externalAdReply: { 
+                                        showAdAttribution: true,
+					title: global.ucapan,
+					body: wm,
+					mediaUrl: yt,
+					description: wm3,
+					previewType: "PHOTO",
+					thumbnail: await (await fetch(pic)).buffer(),
+					sourceUrl: "https://github.com/Undefined17"			
+				}
+			}
+		}
 	
                
 

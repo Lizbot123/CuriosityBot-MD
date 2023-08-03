@@ -156,6 +156,33 @@ handler.all = async function (m) {
             message: { "liveLocationMessage": { "title": "Azami","h": wm, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu1.jpg')}}		
            }
 
+	global.fpayment = {
+				"key": {
+					"remoteJid": "0@s.whatsapp.net",
+					"fromMe": false,
+					"id": "BAE595C600522C9C",
+					"participant": "0@s.whatsapp.net"
+				},
+				"message": {
+					"requestPaymentMessage": {
+						"currencyCodeIso4217": wm,
+						"amount1000": fsizedoc,
+						"requestFrom": "0@s.whatsapp.net",
+						"noteMessage": {
+							"extendedTextMessage": {
+								"text": "Hola Xd " + name
+							}
+						},
+						"expiryTimestamp": fsizedoc,
+						"amount": {
+							"value": fsizedoc,
+							"offset": fsizedoc,
+							"currencyCode": wm
+						}
+					}
+				}
+			}
+
 	
 
 

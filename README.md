@@ -93,12 +93,10 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 <a href="https://github.com/Undefined17"><img src="https://github.com/Undefined17.png" width="250" height="250" alt="Azami19"/></a>
 
 #### COLABORADORES 
-<a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png?size=100" width="100" height="100"><a | [![reyEndymion](https://github.com/ReyEndymion.png?size=100)](https://github.com/ReyEndymion) 
-</a> | [![elrebelde21]
-(https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) 
----|---
-[Gata Dios](https://github.com/GataNina-Li) [reyEndymion](https://github.com/ReyEndymion) | [elrebelde21](https://github.com/elrebelde21)
-Colaboradora | Colaborador | Colaborador|
+<!--[![Gata](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li)
+[![BochilGaming](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21)
+[![Endymion](https://github.com/ReyEndymion?size=100)](https://github.com/ReyEndymion)-->
+
 
 ##### AGRADECIMIENTO ESPECIAL PARA
 <!--[![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo)

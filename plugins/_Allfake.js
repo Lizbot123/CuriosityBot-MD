@@ -191,7 +191,7 @@ global.fakefb = {
             description: "https://www.Facebook.com/AzamiMods", 
             title: wm3,
             body: wm,
-            thumbnailUrl: pp,
+            thumbnailUrl: img1,
             sourceUrl: yt
     }
     } }
